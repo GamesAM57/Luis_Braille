@@ -3,18 +3,12 @@ import java.util.*;
 public class LetraDNI {
     public static void main(String[] args) {
 	Scanner intro = new Scanner(System.in);
-	int dni, valor_dni;
+	int dni;
 	
 	System.out.println("Introduce los 8 números de tu dni: ");
 	dni = intro.nextInt();
 	
-	valor_dni = 0;
-	if (dni <= 99999999) {
-	    valor_dni = dni % 23;
-	     
-	}
-	
-	char letra = switch(valor_dni){
+	char letra = switch(dni % 23){
 		case 0 -> 'T';
 		case 1 -> 'R';
 		case 2 -> 'W';
