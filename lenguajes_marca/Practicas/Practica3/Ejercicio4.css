@@ -1,0 +1,26 @@
+body {
+    font-family: 'Lucida Console';
+}
+
+img {
+    border-top: 5px solid rgb(25, 194, 25);
+    border-bottom: 5px solid rgb(25, 194, 25);
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+h5 {
+    color: rgb(25, 194, 25);
+    margin-left: 20px;
+}
+
+ul {
+    color: rgb(59, 59, 59);
+}
+
+#list {
+    padding-bottom: 20px;
+}
