@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(243, 243, 70);
+}
+h1{
+    text-align: center;
+    background-color: orange;
+}
+div{
+    display: flex;
+    margin-top: 10px;
+}
+img{
+    width: 10%;
+}
+p{
+    width: 90%;
+    font-size: 1.5vw;
+    margin: 0;
+    text-align: justify;
+}
+#div1{
+    background-color: rgb(221, 95, 95);
+}
+#div2{
+    background-color: rgb(52, 149, 194);
+}
+#div3{
+    background-color: rgb(109, 218, 109);
+}
