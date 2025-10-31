@@ -21,12 +21,13 @@ Mi objetivo es **aprender**, **mejorar mis habilidades** y dejar un registro de 
 
 ## 🧭 Estructura del proyecto
 
+```plaintext
 Luis_Braille/
 │
-├── lenguajes_marca/ → Proyectos web (HTML, CSS, etc.)
-├── programacion/ → Ejercicios y programas en Java
-├── bases_datos/ → Consultas y diagramas de BD
-└── entornos_desarrollo/ → Scripts y configuraciones
+├── lenguajes_marca/       → Proyectos web (HTML, CSS, etc.)
+├── programacion/          → Ejercicios y programas en Java
+├── bases_datos/           → Consultas y diagramas de BD
+└── entornos_desarrollo/   → Scripts y configuraciones
 ---
 
 ## 🚀 Objetivos
