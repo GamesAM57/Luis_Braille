@@ -1,0 +1,80 @@
+div{
+        border: 0.01cm solid black; 
+    box-sizing: border-box;
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+}
+
+#zona1{
+    height: 20%;
+    background-color: orange;
+    flex-direction: row;
+}
+
+.zona1_1{
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona2{
+    height: 30%;
+    flex-direction: row;
+    background-color: blue;
+}
+
+#zona2_1{
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona3{
+    height: 100%;
+    width: 30%;
+}
+
+.zona3_1{
+    height: 33.33%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona4{
+    height: 40%;
+    background-color: yellow;
+    flex-direction: row;
+}
+
+#zona4_1{
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona5{
+    height: 100%;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona6{
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+#zona7{
+    height: 10%;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+}

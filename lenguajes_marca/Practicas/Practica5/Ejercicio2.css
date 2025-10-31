@@ -1,0 +1,50 @@
+body{
+height:100vh;
+margin: 0;
+}
+
+div{
+border: 2px solid black; 
+box-sizing: border-box;
+display: flex;
+height: 50%;
+flex-direction: column;
+}
+
+#verde{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(45, 230, 45);
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+#azul{
+    height: 70%;
+    width: 100%;
+    background-color: rgb(78, 100, 221);
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.a_pq{
+    height: 90%;
+    width: 45%;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.v_pq{
+    height: 45px;
+    width: 45px;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+p{
+font-size: 3vw;
+}
