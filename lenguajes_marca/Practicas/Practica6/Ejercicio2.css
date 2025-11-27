@@ -95,6 +95,9 @@ ul{
     width: 45%;
     flex-direction: column;
     justify-content: space-around;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 3%;
 }
 
 .caja412{
@@ -102,6 +105,7 @@ ul{
     width: 45%;
     align-items: center;
     justify-content: center;
+    margin-left: 2%;
 }
 
 .img2{
@@ -117,4 +121,8 @@ ul{
     align-items: center;
     background-color: brown;
     color: aliceblue;
+}
+
+p{
+    text-align: left;
 }
