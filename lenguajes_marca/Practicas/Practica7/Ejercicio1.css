@@ -1,0 +1,28 @@
+div{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+#google{
+    background-color: green;
+    margin-right: 5px;
+}
+
+#bing{
+    background-color: red;
+    margin-right: 5px;
+}
+
+#duck{
+    background-color: blue;
+    width: 150px;
+}
+
+img{
+    height: 100%;
+}
+
+body{
+    background-color: rgb(158, 167, 112);
+}

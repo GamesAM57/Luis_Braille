@@ -1,0 +1,17 @@
+table{
+    height: 100px;
+    width: 500px;
+    text-align: center;
+}
+
+#green{
+    background-color: green;
+}
+
+#beige{
+    background-color: rgb(245, 218, 161);
+}
+
+#amarillo{
+    background-color: rgb(252, 252, 114);
+}

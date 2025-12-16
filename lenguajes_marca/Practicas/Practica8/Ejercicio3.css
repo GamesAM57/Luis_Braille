@@ -1,0 +1,22 @@
+table{
+    height: 100px;
+    width: 450px;
+    text-align: center;
+}
+
+#rojo{
+    background-color: red;
+}
+
+.data{
+    background-color: rgb(205, 211, 218);
+}
+
+#heading{
+    background-color: gray;
+}
+
+#title{
+    color: white;
+    background-color: rgb(92, 92, 92);
+}

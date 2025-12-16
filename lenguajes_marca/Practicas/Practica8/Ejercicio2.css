@@ -1,0 +1,13 @@
+table{
+    height: 100px;
+    width: 450px;
+    text-align: center;
+}
+
+.hora{
+    background-color: greenyellow;
+}
+
+.dia{
+    background-color: aquamarine;
+}

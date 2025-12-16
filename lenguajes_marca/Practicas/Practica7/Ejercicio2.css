@@ -1,0 +1,19 @@
+div{
+    height: 100vi;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#zona1{
+    background-color: red;
+}
+#zona2{
+    background-color: green;
+}
+#zona3{
+    background-color: plum;
+}
+#zona4{
+    background-color: yellow;
+}
