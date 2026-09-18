@@ -57,7 +57,6 @@ public class Clientes {
 
     @Override
     public String toString() {
-        return "ID\t\tNOMBRE\t\tTELEFONO\t\tMATRICULA\n"
-                + id +"\t\t"+nombre+"\t\t"+telefono+"\t\t"+matricula;
+        return id +"\t\t"+nombre+"\t\t"+telefono+"\t\t"+matricula;
     }
 }
