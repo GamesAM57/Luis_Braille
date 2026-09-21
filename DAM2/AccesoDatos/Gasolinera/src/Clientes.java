@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Clientes {
+    public static int siguienteIdCliente = 1; //por defecto a 1
     private int id;
     private String nombre;
     private String telefono;
