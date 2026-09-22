@@ -1,12 +1,9 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Scanner;
+import java.util.*;
 
 public class GestionClientes {
-    static Scanner sc = new Scanner(System.in);
     static GestionFicherosCSV gFich = new GestionFicherosCSV();
 
-    public static void crearCliente(){
+    public static void crearCliente(Scanner sc){
         System.out.println("Creación cliente.");
 
         System.out.print("Introduce el Nombre: ");
@@ -27,10 +24,13 @@ public class GestionClientes {
     }
 
     public static void listarClientes(){
-        Collection<Clientes> listaClientes = gFich.getClientes();
+        List<Clientes> listaClientes = gFich.getClientes();
         if(listaClientes.isEmpty())
             System.out.println("Lista vacía");
         else {
+            listaClientes.sort(
+                    Comparator.comparing((Clientes c) -> c.getNombre().toLowerCase()).thenComparing(c -> c.getId())
+            );
             System.out.println("ID\tNOMBRE\tTELEFONO\tMATRICULA");
             for (Clientes c : listaClientes){
                 System.out.println(c.toString());
@@ -42,8 +42,14 @@ public class GestionClientes {
 
     public static Collection<Clientes> buscarClientes(String palabra){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
 
-        System.out.println("Búsqueda de palabra.");
+        Collection<Clientes> listaClientes = gFich.getClientes();
+        Collection<Clientes> coincidencias = new ArrayList<>();
 
-        return new ArrayList<>();
+        for (Clientes c : listaClientes){
+            if(c.getNombre().contains(palabra) || c.getMatricula().contains(palabra) || c.getTelefono().contains(palabra))
+                coincidencias.add(c);
+        }
+
+        return coincidencias;
     }
 }

@@ -14,7 +14,7 @@ public class Main {
             op = menu();
             switch (op) {
                 case 1 -> {
-                    GestionClientes.crearCliente();
+                    GestionClientes.crearCliente(sc);
                 }
                 case 2 -> {
                     GestionClientes.listarClientes();
