@@ -1,23 +1,17 @@
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class GestionPagos {
-    public static Pagos registrarPago(){
+    public static void registrarPago(){
         System.out.println("Creación de pago.");
+        
 
-        return null;
     }
 
-    public static void consultarPagos(ArrayList<Pagos> listaPagos){
+    public static Collection<Pagos> consultarPagos(){
         System.out.println("Listando pagos.");
-        //Validar si está vacía la lista.
-        //Sacar cabecera y mirar lo del nombre cliente.
-        if(listaPagos.isEmpty())
-            System.out.println("La lista es vacía.");
-        else {
-            for(Pagos p : listaPagos){
-                System.out.println(p.toString());
-            }
-        }
 
+
+        return new ArrayList<Pagos>();
     }
 }

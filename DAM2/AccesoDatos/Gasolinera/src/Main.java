@@ -20,13 +20,13 @@ public class Main {
                     GestionClientes.listarClientes();
                 }
                 case 3 -> {
-                    GestionClientes.buscarClientes(listaClientes);
+                    GestionClientes.buscarClientes("");
                 }
                 case 4 -> {
-                    listaPagos.add(GestionPagos.registrarPago());
+                    GestionPagos.registrarPago();
                 }
                 case 5 -> {
-                    GestionPagos.consultarPagos(listaPagos);
+                    GestionPagos.consultarPagos();
                 }
                 case 0 -> {
                     System.out.println("Has decidido salir.");
@@ -39,8 +39,6 @@ public class Main {
         } while (op != 0);
 
         System.out.println("Saliendo del programa...");
-        GestionFicherosCSV.setClientes(listaClientes);
-        GestionFicherosCSV.setPagos(listaPagos);
     }
 
     public static int menu(){

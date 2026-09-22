@@ -10,12 +10,14 @@ public class GestionFicherosCSV implements GestionFicheros {
     public Collection<Pagos> getPagos() {
 
         //leemos con buffered reader.
+
+        return new ArrayList<Pagos>();
     }
 
     @Override
     public Collection<Clientes> getClientes() {
 
-
+        return new ArrayList<Clientes>();
     }
 
     @Override
