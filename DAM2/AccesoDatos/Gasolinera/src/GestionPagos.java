@@ -4,8 +4,7 @@ public class GestionPagos {
     public static Pagos registrarPago(){
         System.out.println("Creación de pago.");
 
-        Pagos p = null;
-        return p;
+        return null;
     }
 
     public static void consultarPagos(ArrayList<Pagos> listaPagos){
