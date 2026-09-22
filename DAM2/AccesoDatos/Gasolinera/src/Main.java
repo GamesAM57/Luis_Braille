@@ -1,26 +1,26 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
 
 public class Main {
+    //Ver como separar entradas y salidas por consola.
+    //Listas por treemaps hash maps, insercciones de pagos con una estructura más rápida??
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        ArrayList<Clientes> listaClientes = GestionFicheros.getClientes();
-        ArrayList<Pagos> listaPagos = GestionFicheros.getPagos();
-
-        int op = 99;
+                int op = 99;
 
         do{
             op = menu();
             switch (op) {
                 case 1 -> {
-                    listaClientes.add(GestionClientes.crearCliente());
+                    GestionClientes.crearCliente();
                 }
                 case 2 -> {
-                    GestionClientes.listarClientes(listaClientes);
+                    GestionClientes.listarClientes();
                 }
                 case 3 -> {
-                    GestionClientes.buscarClientes();
+                    GestionClientes.buscarClientes(listaClientes);
                 }
                 case 4 -> {
                     listaPagos.add(GestionPagos.registrarPago());
@@ -39,8 +39,8 @@ public class Main {
         } while (op != 0);
 
         System.out.println("Saliendo del programa...");
-        GestionFicheros.setClientes(listaClientes);
-        GestionFicheros.setPagos(listaPagos);
+        GestionFicherosCSV.setClientes(listaClientes);
+        GestionFicherosCSV.setPagos(listaPagos);
     }
 
     public static int menu(){

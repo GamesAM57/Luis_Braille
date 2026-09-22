@@ -11,8 +11,13 @@ public class GestionPagos {
         System.out.println("Listando pagos.");
         //Validar si está vacía la lista.
         //Sacar cabecera y mirar lo del nombre cliente.
-        for(Pagos p : listaPagos){
-            System.out.println(p.toString());
+        if(listaPagos.isEmpty())
+            System.out.println("La lista es vacía.");
+        else {
+            for(Pagos p : listaPagos){
+                System.out.println(p.toString());
+            }
         }
+
     }
 }
