@@ -1,12 +1,20 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 
 public class Main {
+    //Utilizar linked list para orden por defecto
     //Ver como separar entradas y salidas por consola.
-    //Listas por treemaps hash maps, insercciones de pagos con una estructura más rápida??
+    //Cambiar para que solo lea al principio y al final.
+    static GestionFicherosCSV gestorFich = new GestionFicherosCSV();
+
     static Scanner sc = new Scanner(System.in);
+
+    static LinkedList<Clientes> listaClientes = gestorFich.getClientes();
+    static LinkedList<Pagos> listaPagos = gestorFich.getPagos();
+
     public static void main(String[] args) {
                 int op = 99;
 
@@ -20,10 +28,11 @@ public class Main {
                     GestionClientes.listarClientes();
                 }
                 case 3 -> {
-                    GestionClientes.buscarClientes("");
+                    System.out.print("Texto que buscar: ");
+                    GestionClientes.buscarClientes(sc.nextLine());
                 }
                 case 4 -> {
-                    GestionPagos.registrarPago();
+                    GestionPagos.registrarPago(sc);
                 }
                 case 5 -> {
                     GestionPagos.consultarPagos();
@@ -39,6 +48,8 @@ public class Main {
         } while (op != 0);
 
         System.out.println("Saliendo del programa...");
+        gestorFich.setClientes(listaClientes);
+        gestorFich.setPagos(listaPagos);
     }
 
     public static int menu(){
@@ -53,4 +64,6 @@ public class Main {
         System.out.printf("Indique una opción: ");
         return sc.nextInt();
     }
+
+
 }

@@ -24,13 +24,13 @@ public class GestionClientes {
     }
 
     public static void listarClientes(){
-        List<Clientes> listaClientes = gFich.getClientes();
+
+        List<Clientes> listaClientes = new ArrayList<>();
+        listaClientes.addAll(gFich.getClientes());
         if(listaClientes.isEmpty())
             System.out.println("Lista vacía");
         else {
-            listaClientes.sort(
-                    Comparator.comparing((Clientes c) -> c.getNombre().toLowerCase()).thenComparing(c -> c.getId())
-            );
+            Collections.sort(listaClientes);
             System.out.println("ID\tNOMBRE\tTELEFONO\tMATRICULA");
             for (Clientes c : listaClientes){
                 System.out.println(c.toString());

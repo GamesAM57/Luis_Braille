@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Clientes {
+public class Clientes implements Comparable<Clientes> {
     public static int siguienteIdCliente = 1; //por defecto a 1
     private int id;
     private String nombre;
@@ -59,5 +59,14 @@ public class Clientes {
     @Override
     public String toString() {
         return id +"\t\t"+nombre+"\t\t"+telefono+"\t\t"+matricula;
+    }
+
+    @Override
+    public int compareTo(Clientes o) {
+        int i = this.nombre.toLowerCase().compareTo(o.getNombre().toLowerCase());
+        if (i == 0){
+            i = this.id-o.getId();
+        }
+        return i;
     }
 }

@@ -1,9 +1,16 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Scanner;
 
 public class GestionPagos {
-    public static void registrarPago(){
-        System.out.println("Creación de pago.");
+    public static void registrarPago(Scanner sc){
+        GestionClientes.listarClientes();
+        boolean clienteExiste = false;
+        int id = 0;
+        while(!clienteExiste){
+            System.out.print("ID del cliente: ");
+            sc.nextLine();
+        }
 
 
     }
