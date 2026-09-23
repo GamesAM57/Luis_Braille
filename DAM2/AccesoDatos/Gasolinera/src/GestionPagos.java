@@ -4,7 +4,7 @@ import java.util.Collection;
 public class GestionPagos {
     public static void registrarPago(){
         System.out.println("Creación de pago.");
-        
+
 
     }
 

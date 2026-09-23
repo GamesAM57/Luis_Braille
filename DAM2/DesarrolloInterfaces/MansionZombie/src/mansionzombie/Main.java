@@ -7,10 +7,9 @@ public class Main {
         Jugador j = new Jugador();
         
         int habitaciones = Menu.menuDificultades();
-        int i = 1;
         
-        while(i <= habitaciones && j.getPuntosAtaque() > 0){
-                Habitacion h = new Habitacion(i);
+        while(Habitacion.habActual <= habitaciones && j.getPuntosAtaque() > 0){
+                Habitacion h = new Habitacion();
                 
                 resumenJuego(i, j);
             
@@ -19,7 +18,7 @@ public class Main {
             
             
             
-            i ++;
+            Habitacion.habActual  ++;
         }
         
         if (j.getVidasActuales() > 0){

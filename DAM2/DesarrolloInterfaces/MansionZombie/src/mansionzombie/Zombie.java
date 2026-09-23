@@ -1,32 +1,13 @@
 package mansionzombie;
 
-public class Zombie {
-    private int puntosVida;
-    private int puntosAtaque;
-
+public class Zombie extends Personaje{
+    
     public Zombie(int habActual) {
-        puntosVida = generarPuntos(habActual);
-        puntosAtaque = generarPuntos(habActual);
+        super(generarPuntos(habActual), generarPuntos(habActual));
     }
     
-    public int generarPuntos(int habActual){
-        return (int) (Math.random()*2)+2+(habActual-1); // cambiar habitación por el 0
-    }
-
-    public int getPuntosVida() {
-        return puntosVida;
-    }
-
-    public void setPuntosVida(int puntosVida) {
-        this.puntosVida = puntosVida;
-    }
-
-    public int getPuntosAtaque() {
-        return puntosAtaque;
-    }
-
-    public void setPuntosAtaque(int puntosAtaque) {
-        this.puntosAtaque = puntosAtaque;
+    public static int generarPuntos(int habActual){
+        return (int) (Math.random()*2)+2+(habActual-1); 
     }
 
     @Override

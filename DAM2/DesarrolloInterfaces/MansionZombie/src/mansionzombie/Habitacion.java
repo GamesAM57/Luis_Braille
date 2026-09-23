@@ -1,13 +1,13 @@
 package mansionzombie;
 
 public class Habitacion {
+    public static int habActual = 1;
+    
     private int busquedas;
-    private int habActual;
     private int contZombie;
 
-    public Habitacion(int habActual) {
+    public Habitacion() {
         busquedas = 3;
-        this.habActual = habActual;
         contZombie = 1;
     }
 
@@ -26,5 +26,7 @@ public class Habitacion {
     public void setHabActual(int habActual) {
         this.habActual = habActual;
     }
+    
+    
 
 }
