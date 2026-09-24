@@ -8,6 +8,9 @@ public class Clientes implements Comparable<Clientes> {
     private String matricula;
     Scanner sc = new Scanner(System.in);
 
+    public Clientes() {
+    }
+
     public Clientes(int id, String nombre, String telefono, String matricula) {
         this.id = id;
         setNombre(nombre);
@@ -52,7 +55,6 @@ public class Clientes implements Comparable<Clientes> {
             System.out.println("La matricula no puede estar vacía, indicala otra vez:");
             matricula = sc.nextLine();
         }
-        //Hay que añadir para validar la matricula.
         this.matricula = matricula.strip().toUpperCase();
     }
 

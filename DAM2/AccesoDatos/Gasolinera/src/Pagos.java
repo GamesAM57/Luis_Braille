@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -5,16 +8,17 @@ public class Pagos {
     public static int siguienteIdPago = 1; //1 por defecto
     private int id;
     private int idCliente;
-    private Date fechaRepostaje;
+    private String fechaRepostaje;
+    private final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private double importe;
     private double litros;
     private String combusitble;
     Scanner sc = new Scanner(System.in);
 
 
-    public Pagos(int id, int idCliente, Date fechaRepostaje, double importe, double litros, String combusitble) {
+    public Pagos(int id, int idCliente, String fechaRepostaje, double importe, double litros, String combusitble) {
         this.id = id;
-        this.idCliente = idCliente; //como validar??
+        this.idCliente = idCliente;
         setFechaRepostaje(fechaRepostaje);//Mirar formato
         setImporte(importe);
         setLitros(litros);
@@ -31,15 +35,23 @@ public class Pagos {
     }
 
 
-    public Date getFechaRepostaje() {
+    public String getFechaRepostaje() {
         return fechaRepostaje;
     }
 
-    public void setFechaRepostaje(Date fechaRepostaje) {
-        if(fechaRepostaje == null) //mirar formato fecha
-            this.fechaRepostaje = new Date();
-        else
-            this.fechaRepostaje = fechaRepostaje;
+    public void setFechaRepostaje(String fechaRepostaje) {
+        boolean valida = false;
+        do{
+            try {
+                LocalDate.parse(fechaRepostaje, FORMAT);
+                this.fechaRepostaje = fechaRepostaje;
+                valida = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Fecha inválida. Debe tener el formato dd/mm/yyyy y ser una fecha real.");
+                System.out.print("Introduce la fecha (dd/mm/yyyy): ");
+                fechaRepostaje = sc.nextLine();
+            }
+        } while(!valida);
     }
 
     public double getImporte() {

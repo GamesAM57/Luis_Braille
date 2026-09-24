@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
+
 
 public class GestionFicherosCSV implements GestionFicheros {
 
@@ -22,12 +20,12 @@ public class GestionFicherosCSV implements GestionFicheros {
     }
 
     @Override
-    public void setPagos(LinkedList<Pagos> p) {
+    public void setPagos(LinkedList<Pagos> listaPagos) {
 
     }
 
     @Override
-    public void setClientes(LinkedList<Clientes> c) {
+    public void setClientes(LinkedList<Clientes> listaClientes) {
 
 
     }

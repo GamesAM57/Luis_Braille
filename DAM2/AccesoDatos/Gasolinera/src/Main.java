@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 
 public class Main {
-    //Utilizar linked list para orden por defecto
     //Ver como separar entradas y salidas por consola.
     //Cambiar para que solo lea al principio y al final.
     static GestionFicherosCSV gestorFich = new GestionFicherosCSV();
@@ -16,7 +15,7 @@ public class Main {
     static LinkedList<Pagos> listaPagos = gestorFich.getPagos();
 
     public static void main(String[] args) {
-                int op = 99;
+        int op = 99;
 
         do{
             op = menu();
@@ -29,7 +28,7 @@ public class Main {
                 }
                 case 3 -> {
                     System.out.print("Texto que buscar: ");
-                    GestionClientes.buscarClientes(sc.nextLine());
+                    GestionClientes.listarClientes(GestionClientes.buscarClientes(sc.nextLine()));
                 }
                 case 4 -> {
                     GestionPagos.registrarPago(sc);

@@ -17,7 +17,7 @@ public class GestionClientes {
             Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
             System.out.println("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
-            gFich.setClientes(c);
+            Main.listaClientes.add(c);
         } else {
             System.out.println("El cliente no se ha podido crear.");
         }
@@ -25,8 +25,21 @@ public class GestionClientes {
 
     public static void listarClientes(){
 
-        List<Clientes> listaClientes = new ArrayList<>();
-        listaClientes.addAll(gFich.getClientes());
+        if(Main.listaClientes.isEmpty())
+            System.out.println("Lista vacía");
+        else {
+            Collections.sort(Main.listaClientes);
+            System.out.println("ID\tNOMBRE\tTELEFONO\tMATRICULA");
+            for (Clientes c : Main.listaClientes){
+                System.out.println(c.toString());
+            }
+        }
+
+
+    }
+
+    public static void listarClientes(LinkedList<Clientes> listaClientes){
+
         if(listaClientes.isEmpty())
             System.out.println("Lista vacía");
         else {
@@ -40,13 +53,13 @@ public class GestionClientes {
 
     }
 
-    public static Collection<Clientes> buscarClientes(String palabra){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
+    public static LinkedList<Clientes> buscarClientes(String palabra){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
+        palabra = palabra.toLowerCase();
 
-        Collection<Clientes> listaClientes = gFich.getClientes();
-        Collection<Clientes> coincidencias = new ArrayList<>();
+        LinkedList<Clientes> coincidencias = new LinkedList<>();
 
-        for (Clientes c : listaClientes){
-            if(c.getNombre().contains(palabra) || c.getMatricula().contains(palabra) || c.getTelefono().contains(palabra))
+        for (Clientes c : Main.listaClientes){
+            if(c.getNombre().toLowerCase().contains(palabra) || c.getMatricula().toLowerCase().contains(palabra) || c.getTelefono().toLowerCase().contains(palabra))
                 coincidencias.add(c);
         }
 

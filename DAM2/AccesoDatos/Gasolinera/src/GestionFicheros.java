@@ -1,8 +1,8 @@
-import java.util.Collection;
+import java.util.LinkedList;
 
 public interface GestionFicheros {
-    public Collection<Pagos> getPagos();
-    public Collection<Clientes>  getClientes();
-    public void setPagos(Collection<Pagos> p);
-    public void setClientes(Collection<Clientes> c);
+    public LinkedList<Pagos> getPagos();
+    public LinkedList<Clientes>  getClientes();
+    public void setPagos(LinkedList<Pagos> listaPagos);
+    public void setClientes(LinkedList<Clientes> listaClientes);
 }
