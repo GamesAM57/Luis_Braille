@@ -19,7 +19,7 @@ public class Pagos {
     public Pagos(int id, int idCliente, String fechaRepostaje, double importe, double litros, String combusitble) {
         this.id = id;
         this.idCliente = idCliente;
-        setFechaRepostaje(fechaRepostaje);//Mirar formato
+        setFechaRepostaje(fechaRepostaje);
         setImporte(importe);
         setLitros(litros);
         setCombusitble(combusitble);
