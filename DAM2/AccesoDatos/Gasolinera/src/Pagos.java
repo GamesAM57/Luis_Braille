@@ -1,10 +1,11 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Pagos {
+public class Pagos implements Comparable<Clientes>{
     public static int siguienteIdPago = 1; //1 por defecto
     private int id;
     private int idCliente;
@@ -98,5 +99,10 @@ public class Pagos {
     public String toString() {
         //Ver como cambio id cliente a nombre, llamar a cliente get nombre?
         return id+"\t\t"+idCliente+"\t\t"+fechaRepostaje+"\t\t"+importe+" €\t\t"+litros+"\t\t"+combusitble;
+    }
+
+    @Override
+    public int compareTo(Clientes o) {
+        return 0;
     }
 }

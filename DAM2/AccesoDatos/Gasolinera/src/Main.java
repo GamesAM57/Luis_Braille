@@ -11,27 +11,30 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
-    static LinkedList<Clientes> listaClientes = gestorFich.getClientes();
-    static LinkedList<Pagos> listaPagos = gestorFich.getPagos();
+
 
     public static void main(String[] args) {
+
+        LinkedList<Clientes> listaClientes = gestorFich.getClientes();
+        LinkedList<Pagos> listaPagos = gestorFich.getPagos();
+
         int op = 99;
 
         do{
             op = menu();
             switch (op) {
                 case 1 -> {
-                    GestionClientes.crearCliente(sc);
+                    GestionClientes.crearCliente(sc, listaClientes);
                 }
                 case 2 -> {
-                    GestionClientes.listarClientes();
+                    GestionClientes.listarClientes(listaClientes);
                 }
                 case 3 -> {
                     System.out.print("Texto que buscar: ");
-                    GestionClientes.listarClientes(GestionClientes.buscarClientes(sc.nextLine()));
+                    GestionClientes.listarClientes(GestionClientes.buscarClientes(sc.nextLine(),listaClientes));
                 }
                 case 4 -> {
-                    GestionPagos.registrarPago(sc);
+                    GestionPagos.registrarPago( sc,  listaClientes, listaPagos);
                 }
                 case 5 -> {
                     GestionPagos.consultarPagos();

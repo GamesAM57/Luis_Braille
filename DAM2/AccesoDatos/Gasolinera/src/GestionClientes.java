@@ -3,7 +3,7 @@ import java.util.*;
 public class GestionClientes {
     static GestionFicherosCSV gFich = new GestionFicherosCSV();
 
-    public static void crearCliente(Scanner sc){
+    public static void crearCliente(Scanner sc, LinkedList<Clientes> listaClientes){
         System.out.println("Creación cliente.");
 
         System.out.print("Introduce el Nombre: ");
@@ -13,29 +13,14 @@ public class GestionClientes {
         System.out.print("Introduce la matrícula: ");
         String matricula = sc.nextLine();
 
-        if (buscarClientes(matricula).isEmpty()){
+        if (buscarClientes(matricula, listaClientes).isEmpty()){
             Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
             System.out.println("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
-            Main.listaClientes.add(c);
+            listaClientes.add(c);
         } else {
             System.out.println("El cliente no se ha podido crear.");
         }
-    }
-
-    public static void listarClientes(){
-
-        if(Main.listaClientes.isEmpty())
-            System.out.println("Lista vacía");
-        else {
-            Collections.sort(Main.listaClientes);
-            System.out.println("ID\tNOMBRE\tTELEFONO\tMATRICULA");
-            for (Clientes c : Main.listaClientes){
-                System.out.println(c.toString());
-            }
-        }
-
-
     }
 
     public static void listarClientes(LinkedList<Clientes> listaClientes){
@@ -53,16 +38,32 @@ public class GestionClientes {
 
     }
 
-    public static LinkedList<Clientes> buscarClientes(String palabra){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
+    public static LinkedList<Clientes> buscarClientes(String palabra, LinkedList<Clientes> listaClientes){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
         palabra = palabra.toLowerCase();
 
         LinkedList<Clientes> coincidencias = new LinkedList<>();
 
-        for (Clientes c : Main.listaClientes){
+        for (Clientes c : listaClientes){
             if(c.getNombre().toLowerCase().contains(palabra) || c.getMatricula().toLowerCase().contains(palabra) || c.getTelefono().toLowerCase().contains(palabra))
                 coincidencias.add(c);
         }
 
         return coincidencias;
+    }
+
+    public static Clientes obtenerClientePorId(int id, LinkedList<Clientes> listaClientes){
+        Clientes encontrado = new Clientes();
+
+        Iterator<Clientes> it = listaClientes.iterator();
+
+        while(it.hasNext() && id != encontrado.getId()){
+            Clientes c = it.next();
+            if (c.getId() == id){
+                encontrado = c;
+            }
+
+        }
+
+        return encontrado;
     }
 }
