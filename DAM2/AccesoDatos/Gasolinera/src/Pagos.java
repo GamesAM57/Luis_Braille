@@ -5,12 +5,12 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Pagos implements Comparable<Clientes>{
+public class Pagos implements Comparable<Pagos>{
     public static int siguienteIdPago = 1; //1 por defecto
     private int id;
     private int idCliente;
-    private String fechaRepostaje;
-    private final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private LocalDate fechaRepostaje;
+    public static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private double importe;
     private double litros;
     private String combusitble;
@@ -36,23 +36,27 @@ public class Pagos implements Comparable<Clientes>{
     }
 
 
-    public String getFechaRepostaje() {
+    public LocalDate getFechaRepostaje() {
         return fechaRepostaje;
     }
 
     public void setFechaRepostaje(String fechaRepostaje) {
-        boolean valida = false;
-        do{
-            try {
-                LocalDate.parse(fechaRepostaje, FORMAT);
-                this.fechaRepostaje = fechaRepostaje;
-                valida = true;
-            } catch (DateTimeParseException e) {
-                System.out.println("Fecha inválida. Debe tener el formato dd/mm/yyyy y ser una fecha real.");
-                System.out.print("Introduce la fecha (dd/mm/yyyy): ");
-                fechaRepostaje = sc.nextLine();
-            }
-        } while(!valida);
+        if(fechaRepostaje == ""){
+            this.fechaRepostaje = LocalDate.now();
+        } else {
+            boolean valida = false;
+            do{
+                try {
+                    this.fechaRepostaje = LocalDate.parse(fechaRepostaje, FORMAT);
+                    valida = true;
+                } catch (DateTimeParseException e) {
+                    System.out.println("Fecha inválida. Debe tener el formato dd/mm/yyyy y ser una fecha real.");
+                    System.out.print("Introduce la fecha (dd/mm/yyyy): ");
+                    fechaRepostaje = sc.nextLine();
+                }
+            } while(!valida);
+        }
+
     }
 
     public double getImporte() {
@@ -102,7 +106,11 @@ public class Pagos implements Comparable<Clientes>{
     }
 
     @Override
-    public int compareTo(Clientes o) {
-        return 0;
+    public int compareTo(Pagos o) {
+        int n = o.getFechaRepostaje().compareTo(this.fechaRepostaje);
+        if(n==0){
+            n = o.getId()-this.getId();
+        }
+        return n;
     }
 }

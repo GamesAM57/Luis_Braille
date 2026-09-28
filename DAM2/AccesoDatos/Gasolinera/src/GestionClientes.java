@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class GestionClientes {
-    static GestionFicherosCSV gFich = new GestionFicherosCSV();
 
     public static void crearCliente(Scanner sc, LinkedList<Clientes> listaClientes){
         System.out.println("Creación cliente.");
 
         System.out.print("Introduce el Nombre: ");
+        sc.nextLine();
         String nombre = sc.nextLine();
         System.out.print("Introduce el teléfono: ");
         String telefono = sc.nextLine();

@@ -27,6 +27,7 @@ public class GestionPagos {
             if(existe){
 
                 System.out.print("Indica fecha en formato DD/MM/YYYY o vacío para fecha hoy: ");
+                sc.nextLine();
                 String fecha = sc.nextLine();
                 System.out.print("Indica el importe a repostar: ");
                 double importe =sc.nextDouble();
