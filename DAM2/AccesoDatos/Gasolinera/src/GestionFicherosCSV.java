@@ -13,10 +13,11 @@ public class GestionFicherosCSV implements GestionFicheros {
     Path dirFicheros;
     Path fichClientes;
     Path fichPagos;
+    final String S = ",";
+    final String F = ";";
 
     public GestionFicherosCSV() throws IOException {
         dirFicheros = Path.of("datos");
-
         fichClientes = dirFicheros.resolve("clientes.csv");
         fichPagos = dirFicheros.resolve("pagos.csv");
 
@@ -36,7 +37,8 @@ public class GestionFicherosCSV implements GestionFicheros {
             String fila = bf.readLine();
 
             while (fila!=null){
-                String t[] = fila.split(";");
+                fila = fila.substring(0, fila.indexOf(F));
+                String[] t = fila.split(S);
 
                 Pagos p = new Pagos(Integer.parseInt(t[0]), Integer.parseInt(t[1]), t[2], Double.parseDouble(t[3]), Double.parseDouble(t[4]), t[5]);
                 listaPagos.add(p);
@@ -59,7 +61,8 @@ public class GestionFicherosCSV implements GestionFicheros {
             String fila = bf.readLine();
 
             while (fila!=null){
-                String t[] = fila.split(";");
+                fila = fila.substring(0, fila.indexOf(F));
+                String[] t = fila.split(S);
 
                 Clientes c = new Clientes(Integer.parseInt(t[0]), t[1], t[2], t[3]);
                 listaClientes.add(c);
@@ -81,7 +84,7 @@ public class GestionFicherosCSV implements GestionFicheros {
             bf.newLine();
             for(Pagos p : listaPagos){
                 String fechaFormateada = Pagos.FORMAT.format(p.getFechaRepostaje());
-                bf.write(p.getId()+";"+p.getIdCliente()+";"+fechaFormateada+";"+p.getImporte()+";"+p.getLitros()+";"+p.getCombusitble());
+                bf.write(p.getId()+S+p.getIdCliente()+S+fechaFormateada+S+p.getImporte()+S+p.getLitros()+S+p.getCombusitble()+F);
                 bf.newLine();
             }
         } catch (IOException e){
@@ -95,7 +98,7 @@ public class GestionFicherosCSV implements GestionFicheros {
             bf.write("ID;NOMBRE;TELEFONO;MATRICULA");
             bf.newLine();
             for(Clientes c : listaClientes){
-                bf.write(c.getId()+";"+c.getNombre()+";"+c.getTelefono()+";"+c.getMatricula());
+                bf.write(c.getId()+S+c.getNombre()+S+c.getTelefono()+S+c.getMatricula()+F);
                 bf.newLine();
             }
         } catch (IOException e){

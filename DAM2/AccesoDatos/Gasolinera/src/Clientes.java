@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Clientes implements Comparable<Clientes> {
-    public static int siguienteIdCliente = 1; //por defecto a 1
+    public static int siguienteIdCliente;
     private int id;
     private String nombre;
     private String telefono;
@@ -13,9 +13,9 @@ public class Clientes implements Comparable<Clientes> {
 
     public Clientes(int id, String nombre, String telefono, String matricula) {
         this.id = id;
-        setNombre(nombre);
-        setTelefono(telefono);
-        setMatricula(matricula);
+        setNombre(nombre.trim());
+        setTelefono(telefono.trim());
+        setMatricula(matricula.trim());
     }
 
     public int getId() {

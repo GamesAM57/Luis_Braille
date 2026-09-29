@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Pagos implements Comparable<Pagos>{
-    public static int siguienteIdPago = 1; //1 por defecto
+    public static int siguienteIdPago; //1 por defecto
     private int id;
     private int idCliente;
     private LocalDate fechaRepostaje;

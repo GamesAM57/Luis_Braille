@@ -66,4 +66,16 @@ public class GestionClientes {
 
         return encontrado;
     }
+
+    public static int ultimoIdClientes(LinkedList<Clientes> listaClientes){
+        int id = 1;
+
+        if(!listaClientes.isEmpty()){
+            for (Clientes c : listaClientes){
+                id = Math.max(id, c.getId());
+            }
+        }
+
+        return id+1;
+    }
 }

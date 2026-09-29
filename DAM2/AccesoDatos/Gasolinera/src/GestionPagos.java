@@ -52,15 +52,29 @@ public class GestionPagos {
             System.out.println("No existen pagos registrados.");
         } else {
             System.out.println("ID\tCLIENTE\tFECHA\tIMPORTE\tLITROS\tCOMBUSTIBLE");
+            Collections.sort(listaPagos);
             for(Pagos p : listaPagos){
 
                 Clientes c = GestionClientes.obtenerClientePorId(p.getIdCliente(), listaClientes);
                 if(c.getId() != 0) {
-                    System.out.println(p.getId() + "\t" + c.getNombre() + "\t" + p.getFechaRepostaje() + "\t" + p.getImporte() + " €\t" + p.getLitros() + "\t" + p.getCombusitble());
+                    String fechaFormateada = Pagos.FORMAT.format(p.getFechaRepostaje());
+                    System.out.println(p.getId() + "\t" + c.getNombre() + "\t" + fechaFormateada + "\t" + p.getImporte() + " €\t" + p.getLitros() + "\t" + p.getCombusitble());
                 }
             }
         }
 
         
+    }
+
+    public static int ultimoIdPagos(LinkedList<Pagos> listaPagos){
+        int id = 1;
+
+        if(!listaPagos.isEmpty()){
+            for (Pagos p : listaPagos){
+                id = Math.max(id, p.getId());
+            }
+        }
+
+        return id;
     }
 }

@@ -18,6 +18,9 @@ public class Main {
             LinkedList<Clientes> listaClientes = gestorFich.getClientes();
             LinkedList<Pagos> listaPagos = gestorFich.getPagos();
 
+            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(listaClientes);
+            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(listaPagos);
+
             int op;
 
             do{
