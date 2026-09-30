@@ -25,7 +25,6 @@ public class GestionPagos {
             }
 
             if(existe){
-
                 System.out.print("Indica fecha en formato DD/MM/YYYY o vacío para fecha hoy: ");
                 sc.nextLine();
                 String fecha = sc.nextLine();
@@ -62,8 +61,6 @@ public class GestionPagos {
                 }
             }
         }
-
-        
     }
 
     public static int ultimoIdPagos(LinkedList<Pagos> listaPagos){
@@ -74,7 +71,6 @@ public class GestionPagos {
                 id = Math.max(id, p.getId());
             }
         }
-
         return id;
     }
 }

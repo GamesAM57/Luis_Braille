@@ -80,7 +80,7 @@ public class GestionFicherosCSV implements GestionFicheros {
     @Override
     public void setPagos(LinkedList<Pagos> listaPagos) {
         try(BufferedWriter bf = Files.newBufferedWriter(fichPagos, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
-            bf.write("ID;CLIENTE;FECHA;IMPORTE;LITROS;COMBUSTIBLE");
+            bf.write("ID"+S+"CLIENTE"+S+"FECHA"+S+"IMPORTE"+S+"LITROS"+S+"COMBUSTIBLE"+F);
             bf.newLine();
             for(Pagos p : listaPagos){
                 String fechaFormateada = Pagos.FORMAT.format(p.getFechaRepostaje());
@@ -95,7 +95,7 @@ public class GestionFicherosCSV implements GestionFicheros {
     @Override
     public void setClientes(LinkedList<Clientes> listaClientes) {
         try(BufferedWriter bf = Files.newBufferedWriter(fichClientes, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
-            bf.write("ID;NOMBRE;TELEFONO;MATRICULA");
+            bf.write("ID"+S+"NOMBRE"+S+"TELEFONO"+S+"MATRICULA"+F);
             bf.newLine();
             for(Clientes c : listaClientes){
                 bf.write(c.getId()+S+c.getNombre()+S+c.getTelefono()+S+c.getMatricula()+F);

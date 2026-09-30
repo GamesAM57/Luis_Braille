@@ -1,14 +1,12 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Pagos implements Comparable<Pagos>{
-    public static int siguienteIdPago; //1 por defecto
-    private int id;
-    private int idCliente;
+    public static int siguienteIdPago;
+    private final int id;
+    private final int idCliente;
     private LocalDate fechaRepostaje;
     public static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private double importe;
@@ -41,7 +39,7 @@ public class Pagos implements Comparable<Pagos>{
     }
 
     public void setFechaRepostaje(String fechaRepostaje) {
-        if(fechaRepostaje == ""){
+        if(fechaRepostaje.isEmpty()){
             this.fechaRepostaje = LocalDate.now();
         } else {
             boolean valida = false;
@@ -64,9 +62,12 @@ public class Pagos implements Comparable<Pagos>{
     }
 
     public void setImporte(double importe) {
-        while(importe <= 0) { //hay que validar lo de los decimales
-            System.out.println("Has introducido un importe negativo, introducelo otra vez, importe mayor a 0:");
-            sc.nextLine();
+        while(importe <= 0 || comprobarDecimales(importe)) {
+            if(importe<=0)
+                System.out.println("Has introducido un importe negativo, introducelo otra vez, importe mayor a 0:");
+            else
+                System.out.println("Tienes que indicar un número con máximo dos decimales:");
+
             importe = sc.nextDouble();
         }
         this.importe = importe;
@@ -77,13 +78,15 @@ public class Pagos implements Comparable<Pagos>{
     }
 
     public void setLitros(double litros) {
-        while(litros <= 0 ) { //falta como validar los decimales
-            System.out.println("Has indicado litros incorrectos, introduce un número mayor a 0:");
-            sc.nextLine();
+        while(litros <= 0 || comprobarDecimales(litros)) {
+            if(importe<=0)
+                System.out.println("Has indicado litros incorrectos, introduce un número mayor a 0:");
+            else
+                System.out.println("Tienes que indicar un número con máximo dos decimales:");
+
             litros = sc.nextDouble();
         }
         this.litros = litros;
-
     }
 
     public String getCombusitble() {
@@ -91,7 +94,7 @@ public class Pagos implements Comparable<Pagos>{
     }
 
     public void setCombusitble(String combusitble) {
-        while(combusitble == null || combusitble == ""){
+        while(combusitble == null || combusitble.isEmpty()){
             System.out.println("Has dejado el combusitble en blanco, introduce texto:");
             combusitble = sc.nextLine();
         }
@@ -101,7 +104,6 @@ public class Pagos implements Comparable<Pagos>{
 
     @Override
     public String toString() {
-        //Ver como cambio id cliente a nombre, llamar a cliente get nombre?
         return id+"\t\t"+idCliente+"\t\t"+fechaRepostaje+"\t\t"+importe+" €\t\t"+litros+"\t\t"+combusitble;
     }
 
@@ -112,5 +114,9 @@ public class Pagos implements Comparable<Pagos>{
             n = o.getId()-this.getId();
         }
         return n;
+    }
+
+    public boolean comprobarDecimales (double n){
+        return Math.round(n * 100) / 100.0 != importe;
     }
 }

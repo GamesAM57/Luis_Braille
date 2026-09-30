@@ -3,10 +3,8 @@ import java.util.*;
 public class GestionClientes {
 
     public static void crearCliente(Scanner sc, LinkedList<Clientes> listaClientes){
-        System.out.println("Creación cliente.");
 
-        System.out.print("Introduce el Nombre: ");
-        sc.nextLine();
+        Terminal.pedirString("nombre");
         String nombre = sc.nextLine();
         System.out.print("Introduce el teléfono: ");
         String telefono = sc.nextLine();
@@ -19,7 +17,7 @@ public class GestionClientes {
             Clientes.siguienteIdCliente += 1;
             listaClientes.add(c);
         } else {
-            System.out.println("El cliente no se ha podido crear.");
+            System.out.println("Ya existe un cliente con esa matricula.");
         }
     }
 
@@ -34,8 +32,6 @@ public class GestionClientes {
                 System.out.println(c.toString());
             }
         }
-
-
     }
 
     public static LinkedList<Clientes> buscarClientes(String palabra, LinkedList<Clientes> listaClientes){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
@@ -47,7 +43,6 @@ public class GestionClientes {
             if(c.getNombre().toLowerCase().contains(palabra) || c.getMatricula().toLowerCase().contains(palabra) || c.getTelefono().toLowerCase().contains(palabra))
                 coincidencias.add(c);
         }
-
         return coincidencias;
     }
 
@@ -61,9 +56,7 @@ public class GestionClientes {
             if (c.getId() == id){
                 encontrado = c;
             }
-
         }
-
         return encontrado;
     }
 
@@ -75,7 +68,6 @@ public class GestionClientes {
                 id = Math.max(id, c.getId());
             }
         }
-
         return id+1;
     }
 }

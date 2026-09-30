@@ -27,7 +27,7 @@ public class Clientes implements Comparable<Clientes> {
     }
 
     public void setNombre(String nombre) {
-        while(nombre == "" || nombre == null){
+        while(isVacio(nombre)){
             System.out.println("El nombre no puede estar vacío, indicalo otra vez:");
             nombre = sc.nextLine();
         }
@@ -39,7 +39,7 @@ public class Clientes implements Comparable<Clientes> {
     }
 
     public void setTelefono(String telefono) {
-        while(telefono == "" || telefono == null){
+        while(isVacio(telefono)){
             System.out.println("El telefono no puede estar vacío, indicalo otra vez:");
             telefono = sc.nextLine();
         }
@@ -51,7 +51,7 @@ public class Clientes implements Comparable<Clientes> {
     }
 
     public void setMatricula(String matricula) {
-        while(matricula == "" || matricula == null){
+        while( isVacio(matricula)){
             System.out.println("La matricula no puede estar vacía, indicala otra vez:");
             matricula = sc.nextLine();
         }
@@ -70,5 +70,9 @@ public class Clientes implements Comparable<Clientes> {
             i = this.id-o.getId();
         }
         return i;
+    }
+
+    public boolean isVacio(String s){
+        return s == null || s.isBlank();
     }
 }
