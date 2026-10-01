@@ -1,21 +1,20 @@
-import java.util.Scanner;
-
 public class Clientes implements Comparable<Clientes> {
     public static int siguienteIdCliente;
     private int id;
     private String nombre;
     private String telefono;
     private String matricula;
-    Scanner sc = new Scanner(System.in);
+    private Terminal terminal;
 
     public Clientes() {
     }
 
-    public Clientes(int id, String nombre, String telefono, String matricula) {
+    public Clientes(int id, String nombre, String telefono, String matricula, Terminal terminal) {
         this.id = id;
         setNombre(nombre.trim());
         setTelefono(telefono.trim());
         setMatricula(matricula.trim());
+        this.terminal = terminal;
     }
 
     public int getId() {
@@ -28,8 +27,7 @@ public class Clientes implements Comparable<Clientes> {
 
     public void setNombre(String nombre) {
         while(isVacio(nombre)){
-            System.out.println("El nombre no puede estar vacío, indicalo otra vez:");
-            nombre = sc.nextLine();
+            nombre = terminal.pedirString("El nombre no puede estar vacío, indicalo otra vez:");
         }
         this.nombre = nombre.strip();
     }
@@ -40,8 +38,7 @@ public class Clientes implements Comparable<Clientes> {
 
     public void setTelefono(String telefono) {
         while(isVacio(telefono)){
-            System.out.println("El telefono no puede estar vacío, indicalo otra vez:");
-            telefono = sc.nextLine();
+            telefono = terminal.pedirString("El telefono no puede estar vacío, indicalo otra vez:");
         }
         this.telefono = telefono.strip();
     }
@@ -52,8 +49,7 @@ public class Clientes implements Comparable<Clientes> {
 
     public void setMatricula(String matricula) {
         while( isVacio(matricula)){
-            System.out.println("La matricula no puede estar vacía, indicala otra vez:");
-            matricula = sc.nextLine();
+            matricula = terminal.pedirString("La matricula no puede estar vacía, indicala otra vez:");
         }
         this.matricula = matricula.strip().toUpperCase();
     }

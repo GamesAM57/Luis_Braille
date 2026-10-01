@@ -7,16 +7,15 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.LinkedList;
 
-
 public class GestionFicherosCSV implements GestionFicheros {
-
     Path dirFicheros;
     Path fichClientes;
     Path fichPagos;
     final String S = ",";
     final String F = ";";
+    Terminal terminal;
 
-    public GestionFicherosCSV() throws IOException {
+    public GestionFicherosCSV(Terminal terminal) throws IOException {
         dirFicheros = Path.of("datos");
         fichClientes = dirFicheros.resolve("clientes.csv");
         fichPagos = dirFicheros.resolve("pagos.csv");
@@ -27,6 +26,7 @@ public class GestionFicherosCSV implements GestionFicheros {
             Files.createFile(fichClientes);
         if(!Files.exists(fichPagos))
             Files.createFile(fichPagos);
+        this.terminal = terminal;
     }
 
     @Override
@@ -40,16 +40,14 @@ public class GestionFicherosCSV implements GestionFicheros {
                 fila = fila.substring(0, fila.indexOf(F));
                 String[] t = fila.split(S);
 
-                Pagos p = new Pagos(Integer.parseInt(t[0]), Integer.parseInt(t[1]), t[2], Double.parseDouble(t[3]), Double.parseDouble(t[4]), t[5]);
+                Pagos p = new Pagos(Integer.parseInt(t[0]), Integer.parseInt(t[1]), t[2], Double.parseDouble(t[3]), Double.parseDouble(t[4]), t[5], terminal);
                 listaPagos.add(p);
 
                 fila = bf.readLine();
             }
-
         } catch (IOException e) {
-            System.out.println("Error al obtener pagos. "+e.getMessage());
+            terminal.mostrar("Error al obtener pagos. "+e.getMessage());
         }
-
         return  listaPagos;
     }
 
@@ -64,16 +62,15 @@ public class GestionFicherosCSV implements GestionFicheros {
                 fila = fila.substring(0, fila.indexOf(F));
                 String[] t = fila.split(S);
 
-                Clientes c = new Clientes(Integer.parseInt(t[0]), t[1], t[2], t[3]);
+                Clientes c = new Clientes(Integer.parseInt(t[0]), t[1], t[2], t[3], terminal);
                 listaClientes.add(c);
 
                 fila = bf.readLine();
             }
 
         } catch (IOException e) {
-            System.out.println("Error al obtener clientes. "+e.getMessage());
+            terminal.mostrar("Error al obtener clientes. " + e.getMessage());
         }
-
         return  listaClientes;
     }
 
@@ -88,7 +85,7 @@ public class GestionFicherosCSV implements GestionFicheros {
                 bf.newLine();
             }
         } catch (IOException e){
-            System.out.println("Error al guardar pagos. "+e.getMessage());
+            terminal.mostrar("Error al guardar pagos. "+e.getMessage());
         }
     }
 
@@ -102,8 +99,7 @@ public class GestionFicherosCSV implements GestionFicheros {
                 bf.newLine();
             }
         } catch (IOException e){
-            System.out.println("Error al guardar clientes. "+e.getMessage());
+            terminal.mostrar("Error al guardar clientes. "+e.getMessage());
         }
-
     }
 }

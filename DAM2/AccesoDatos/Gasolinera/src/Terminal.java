@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Terminal {
 
-    public static Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
-    public static int menu(){
+    public int menu(){
         System.out.println("=== GESTION DE GASOLINERA ===");
         System.out.println("1. Dar de alta cliente");
         System.out.println("2. Listar clientes");
@@ -17,30 +17,28 @@ public class Terminal {
         return sc.nextInt();
     }
 
-    public static String pedirString(String op){
-        String dato = "";
-        switch (op){
-            case "nombre" -> {
-                System.out.println("Introduce tu nombre.");
-                limpiarScanner();
-                dato = sc.nextLine();
-            }
-            case "telefono" -> {
-                System.out.println("Introduce tu telefono.");
-                limpiarScanner();
-                dato = sc.nextLine();
-            }
+    public String pedirString(String mensaje){
+        System.out.print(mensaje);
+        return sc.nextLine();
+    }
 
-        }
+    public int pedirEntero(String mensaje){
+        return Integer.parseInt(pedirString(mensaje));
+    }
 
-        return dato;
-    };
+    public double pedirDouble(String mensaje){
+        return Double.parseDouble(pedirString(mensaje));
+    }
 
-    public static void limpiarScanner(){
+    public void limpiarScanner(){
         sc.nextLine();
     }
 
-    public static void cerrarScanner(){
+    public void cerrarScanner(){
         sc.close();
+    }
+
+    public void mostrar(String mensaje){
+        System.out.println(mensaje);
     }
 }

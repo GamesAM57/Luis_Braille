@@ -1,13 +1,11 @@
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
-
+        Terminal terminal = new Terminal();
         try{
-            GestionFicherosCSV gestorFich = new GestionFicherosCSV();
+            GestionFicherosCSV gestorFich = new GestionFicherosCSV(terminal);
             LinkedList<Clientes> listaClientes = gestorFich.getClientes();
             LinkedList<Pagos> listaPagos = gestorFich.getPagos();
 
@@ -17,41 +15,39 @@ public class Main {
             int op;
 
             do{
-                op = Terminal.menu();;
+                op = terminal.menu();
+                terminal.limpiarScanner();
                 switch (op) {
                     case 1 -> {
-                        GestionClientes.crearCliente(Terminal.sc, listaClientes);
+                        GestionClientes.crearCliente(terminal, listaClientes);
                     }
                     case 2 -> {
-                        GestionClientes.listarClientes(listaClientes);
+                        GestionClientes.listarClientes(terminal, listaClientes);
                     }
                     case 3 -> {
-                        System.out.print("Texto que buscar: ");
-                        Terminal.limpiarScanner();
-                        GestionClientes.listarClientes(GestionClientes.buscarClientes(sc.nextLine(),listaClientes));
+                        String palabra= terminal.pedirString("Texto que buscar: ");
+                        GestionClientes.listarClientes(terminal, GestionClientes.buscarClientes(palabra,listaClientes));
                     }
                     case 4 -> {
-                        GestionPagos.registrarPago( Terminal.sc,  listaClientes, listaPagos);
+                        GestionPagos.registrarPago( terminal,  listaClientes, listaPagos);
                     }
                     case 5 -> {
-                        GestionPagos.consultarPagos(listaPagos, listaClientes);
+                        GestionPagos.consultarPagos(terminal, listaPagos, listaClientes);
                     }
                     case 0 -> {
-                        System.out.println("Has decidido salir.");
+                        terminal.mostrar("Hasta pronto!!");
                     }
                     default -> {
-                        System.out.println("No has seleccionado un número correcto.");
-                        op = Terminal.menu();
+                        terminal.mostrar("No has seleccionado un número correcto.");
                     }
                 }
             } while (op != 0);
 
-            System.out.println("Saliendo del programa...");
             gestorFich.setClientes(listaClientes);
             gestorFich.setPagos(listaPagos);
-            Terminal.cerrarScanner();
+            terminal.cerrarScanner();
         } catch (IOException e){
-            System.out.println("Error al crear o acceder a ficheros, comprueba permisos. "+e.getMessage());
+            terminal.mostrar("Error al crear o acceder a ficheros, comprueba permisos. "+e.getMessage());
         }
     }
 }

@@ -2,34 +2,31 @@ import java.util.*;
 
 public class GestionClientes {
 
-    public static void crearCliente(Scanner sc, LinkedList<Clientes> listaClientes){
+    public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes){
 
-        Terminal.pedirString("nombre");
-        String nombre = sc.nextLine();
-        System.out.print("Introduce el teléfono: ");
-        String telefono = sc.nextLine();
-        System.out.print("Introduce la matrícula: ");
-        String matricula = sc.nextLine();
+        String nombre    = terminal.pedirString("Nombre: ");
+        String telefono  = terminal.pedirString("Teléfono: ");
+        String matricula = terminal.pedirString("Matrícula: ").toUpperCase();
 
         if (buscarClientes(matricula, listaClientes).isEmpty()){
-            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
-            System.out.println("Cliente creado con id: " + c.getId());
+            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula,terminal);
+            terminal.mostrar("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
             listaClientes.add(c);
         } else {
-            System.out.println("Ya existe un cliente con esa matricula.");
+            terminal.mostrar("Ya existe un cliente con esa matricula.");
         }
     }
 
-    public static void listarClientes(LinkedList<Clientes> listaClientes){
+    public static void listarClientes(Terminal terminal, LinkedList<Clientes> listaClientes){
 
         if(listaClientes.isEmpty())
-            System.out.println("Lista vacía");
+            terminal.mostrar("No hay clientes creados.");
         else {
             Collections.sort(listaClientes);
-            System.out.println("ID\tNOMBRE\tTELEFONO\tMATRICULA");
+            terminal.mostrar("ID\tNOMBRE\tTELEFONO\tMATRICULA");
             for (Clientes c : listaClientes){
-                System.out.println(c.toString());
+                terminal.mostrar(c.toString());
             }
         }
     }

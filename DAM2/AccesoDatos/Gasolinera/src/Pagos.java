@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.Scanner;
 
 public class Pagos implements Comparable<Pagos>{
     public static int siguienteIdPago;
@@ -12,27 +11,25 @@ public class Pagos implements Comparable<Pagos>{
     private double importe;
     private double litros;
     private String combusitble;
-    Scanner sc = new Scanner(System.in);
+    Terminal terminal;
 
-
-    public Pagos(int id, int idCliente, String fechaRepostaje, double importe, double litros, String combusitble) {
+    public Pagos(int id, int idCliente, String fechaRepostaje, double importe, double litros, String combusitble, Terminal terminal) {
         this.id = id;
         this.idCliente = idCliente;
         setFechaRepostaje(fechaRepostaje);
         setImporte(importe);
         setLitros(litros);
         setCombusitble(combusitble);
+        this.terminal = terminal;
     }
 
     public int getId() {
         return id;
     }
 
-
     public int getIdCliente() {
         return idCliente;
     }
-
 
     public LocalDate getFechaRepostaje() {
         return fechaRepostaje;
@@ -48,13 +45,11 @@ public class Pagos implements Comparable<Pagos>{
                     this.fechaRepostaje = LocalDate.parse(fechaRepostaje, FORMAT);
                     valida = true;
                 } catch (DateTimeParseException e) {
-                    System.out.println("Fecha inválida. Debe tener el formato dd/mm/yyyy y ser una fecha real.");
-                    System.out.print("Introduce la fecha (dd/mm/yyyy): ");
-                    fechaRepostaje = sc.nextLine();
+                    terminal.mostrar("Fecha inválida. Debe tener el formato dd/mm/yyyy y ser una fecha real.");
+                    terminal.mostrar("Introduce la fecha (dd/mm/yyyy): ");
                 }
             } while(!valida);
         }
-
     }
 
     public double getImporte() {
@@ -64,11 +59,9 @@ public class Pagos implements Comparable<Pagos>{
     public void setImporte(double importe) {
         while(importe <= 0 || comprobarDecimales(importe)) {
             if(importe<=0)
-                System.out.println("Has introducido un importe negativo, introducelo otra vez, importe mayor a 0:");
+                importe = terminal.pedirDouble("Has introducido un importe negativo, introducelo otra vez, importe mayor a 0:");
             else
-                System.out.println("Tienes que indicar un número con máximo dos decimales:");
-
-            importe = sc.nextDouble();
+                importe = terminal.pedirDouble("Tienes que indicar un número con máximo dos decimales:");
         }
         this.importe = importe;
     }
@@ -79,12 +72,10 @@ public class Pagos implements Comparable<Pagos>{
 
     public void setLitros(double litros) {
         while(litros <= 0 || comprobarDecimales(litros)) {
-            if(importe<=0)
-                System.out.println("Has indicado litros incorrectos, introduce un número mayor a 0:");
+            if(litros<=0)
+                litros = terminal.pedirDouble("Has introducido litros negativo, introducelo otra vez, litros mayor a 0:");
             else
-                System.out.println("Tienes que indicar un número con máximo dos decimales:");
-
-            litros = sc.nextDouble();
+                litros = terminal.pedirDouble("Tienes que indicar un número con máximo dos decimales:");
         }
         this.litros = litros;
     }
@@ -95,10 +86,8 @@ public class Pagos implements Comparable<Pagos>{
 
     public void setCombusitble(String combusitble) {
         while(combusitble == null || combusitble.isEmpty()){
-            System.out.println("Has dejado el combusitble en blanco, introduce texto:");
-            combusitble = sc.nextLine();
+            combusitble = terminal.pedirString("Has dejado el combusitble en blanco, introduce texto:");
         }
-
         this.combusitble = combusitble;
     }
 
