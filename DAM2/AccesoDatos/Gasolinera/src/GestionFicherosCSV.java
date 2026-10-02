@@ -78,10 +78,9 @@ public class GestionFicherosCSV implements GestionFicheros {
     public void setPagos(LinkedList<Pagos> listaPagos) {
         try(BufferedWriter bf = Files.newBufferedWriter(fichPagos, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
             bf.write("ID"+S+"CLIENTE"+S+"FECHA"+S+"IMPORTE"+S+"LITROS"+S+"COMBUSTIBLE"+F);
-            bf.newLine();
             for(Pagos p : listaPagos){
-                bf.write(p.getId()+S+p.getIdCliente()+S+p.getFechaRepostaje()+S+p.getImporte()+S+p.getLitros()+S+p.getCombusitble()+F);
                 bf.newLine();
+                bf.write(p.getId()+S+p.getIdCliente()+S+p.getFechaRepostaje()+S+p.getImporte()+S+p.getLitros()+S+p.getCombusitble()+F);
             }
         } catch (IOException e){
             terminal.mostrar("Error al guardar pagos. "+e.getMessage());
@@ -92,10 +91,9 @@ public class GestionFicherosCSV implements GestionFicheros {
     public void setClientes(LinkedList<Clientes> listaClientes) {
         try(BufferedWriter bf = Files.newBufferedWriter(fichClientes, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
             bf.write("ID"+S+"NOMBRE"+S+"TELEFONO"+S+"MATRICULA"+F);
-            bf.newLine();
             for(Clientes c : listaClientes){
-                bf.write(c.getId()+S+c.getNombre()+S+c.getTelefono()+S+c.getMatricula()+F);
                 bf.newLine();
+                bf.write(c.getId()+S+c.getNombre()+S+c.getTelefono()+S+c.getMatricula()+F);
             }
         } catch (IOException e){
             terminal.mostrar("Error al guardar clientes. "+e.getMessage());
