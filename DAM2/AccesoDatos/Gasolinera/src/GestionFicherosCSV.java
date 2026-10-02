@@ -62,7 +62,7 @@ public class GestionFicherosCSV implements GestionFicheros {
                 fila = fila.substring(0, fila.indexOf(F));
                 String[] t = fila.split(S);
 
-                Clientes c = new Clientes(Integer.parseInt(t[0]), t[1], t[2], t[3], terminal);
+                Clientes c = new Clientes(Integer.parseInt(t[0]), t[1], t[2], t[3]);
                 listaClientes.add(c);
 
                 fila = bf.readLine();
@@ -80,8 +80,7 @@ public class GestionFicherosCSV implements GestionFicheros {
             bf.write("ID"+S+"CLIENTE"+S+"FECHA"+S+"IMPORTE"+S+"LITROS"+S+"COMBUSTIBLE"+F);
             bf.newLine();
             for(Pagos p : listaPagos){
-                String fechaFormateada = Pagos.FORMAT.format(p.getFechaRepostaje());
-                bf.write(p.getId()+S+p.getIdCliente()+S+fechaFormateada+S+p.getImporte()+S+p.getLitros()+S+p.getCombusitble()+F);
+                bf.write(p.getId()+S+p.getIdCliente()+S+p.getFechaRepostaje()+S+p.getImporte()+S+p.getLitros()+S+p.getCombusitble()+F);
                 bf.newLine();
             }
         } catch (IOException e){

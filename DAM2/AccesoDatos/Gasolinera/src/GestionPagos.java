@@ -24,10 +24,10 @@ public class GestionPagos {
             }
 
             if(existe){
-                String fecha = terminal.pedirString("Indica fecha en formato DD/MM/YYYY o vacío para fecha hoy: ");
+                String fecha = terminal.pedirFecha("Indica fecha en formato DD/MM/YYYY o vacío para fecha hoy: ");
                 double importe = terminal.pedirDouble("Indica el importe a repostar: ");
                 double litros = terminal.pedirDouble("Indica los litros a repostar: ");
-                String combustible = terminal.pedirString("Indica el combustible utilizado: ");
+                String combustible = terminal.pedirStringObligatorio("Indica el combustible utilizado: ");
 
                 Pagos p = new Pagos(Pagos.siguienteIdPago, idCliente, fecha, importe, litros, combustible, terminal);
                 terminal.mostrar("Pago "+p.getId()+" registrado para "+c.getNombre()+": "+p.getImporte()+" euros.");
@@ -47,8 +47,7 @@ public class GestionPagos {
             for(Pagos p : listaPagos){
                 Clientes c = GestionClientes.obtenerClientePorId(p.getIdCliente(), listaClientes);
                 if(c.getId() != 0) {
-                    String fechaFormateada = Pagos.FORMAT.format(p.getFechaRepostaje());
-                    terminal.mostrar(p.getId() + "\t" + c.getNombre() + "\t" + fechaFormateada + "\t" + p.getImporte() + " €\t" + p.getLitros() + "\t" + p.getCombusitble());
+                    terminal.mostrar(p.getId() + "\t" + c.getNombre() + "\t" + p.getFechaRepostaje() + "\t" + p.getImporte() + " €\t" + p.getLitros() + "\t" + p.getCombusitble());
                 }
             }
         }
@@ -61,6 +60,7 @@ public class GestionPagos {
             for (Pagos p : listaPagos){
                 id = Math.max(id, p.getId());
             }
+            id += 1;
         }
         return id;
     }

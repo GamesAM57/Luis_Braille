@@ -16,7 +16,6 @@ public class Main {
 
             do{
                 op = terminal.menu();
-                terminal.limpiarScanner();
                 switch (op) {
                     case 1 -> {
                         GestionClientes.crearCliente(terminal, listaClientes);
@@ -25,8 +24,7 @@ public class Main {
                         GestionClientes.listarClientes(terminal, listaClientes);
                     }
                     case 3 -> {
-                        String palabra= terminal.pedirString("Texto que buscar: ");
-                        GestionClientes.listarClientes(terminal, GestionClientes.buscarClientes(palabra,listaClientes));
+                        GestionClientes.buscarClientes(terminal,listaClientes);
                     }
                     case 4 -> {
                         GestionPagos.registrarPago( terminal,  listaClientes, listaPagos);

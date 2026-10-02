@@ -4,12 +4,12 @@ public class GestionClientes {
 
     public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes){
 
-        String nombre    = terminal.pedirString("Nombre: ");
-        String telefono  = terminal.pedirString("Teléfono: ");
-        String matricula = terminal.pedirString("Matrícula: ").toUpperCase();
+        String nombre    = terminal.pedirStringObligatorio("Nombre: ");
+        String telefono  = terminal.pedirStringObligatorio("Teléfono: ");
+        String matricula = terminal.pedirStringObligatorio("Matrícula: ").toUpperCase();
 
-        if (buscarClientes(matricula, listaClientes).isEmpty()){
-            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula,terminal);
+        if (!buscarMatricula(matricula, listaClientes)){
+            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
             terminal.mostrar("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
             listaClientes.add(c);
@@ -21,7 +21,7 @@ public class GestionClientes {
     public static void listarClientes(Terminal terminal, LinkedList<Clientes> listaClientes){
 
         if(listaClientes.isEmpty())
-            terminal.mostrar("No hay clientes creados.");
+            terminal.mostrar("No hay clientes en la lista.");
         else {
             Collections.sort(listaClientes);
             terminal.mostrar("ID\tNOMBRE\tTELEFONO\tMATRICULA");
@@ -31,8 +31,8 @@ public class GestionClientes {
         }
     }
 
-    public static LinkedList<Clientes> buscarClientes(String palabra, LinkedList<Clientes> listaClientes){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
-        palabra = palabra.toLowerCase();
+    public static void buscarClientes(Terminal terminal, LinkedList<Clientes> listaClientes){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
+        String palabra = terminal.pedirStringObligatorio("Indica palabra a buscar: ").toLowerCase();
 
         LinkedList<Clientes> coincidencias = new LinkedList<>();
 
@@ -40,7 +40,8 @@ public class GestionClientes {
             if(c.getNombre().toLowerCase().contains(palabra) || c.getMatricula().toLowerCase().contains(palabra) || c.getTelefono().toLowerCase().contains(palabra))
                 coincidencias.add(c);
         }
-        return coincidencias;
+
+        listarClientes(terminal, coincidencias);
     }
 
     public static Clientes obtenerClientePorId(int id, LinkedList<Clientes> listaClientes){
@@ -64,7 +65,19 @@ public class GestionClientes {
             for (Clientes c : listaClientes){
                 id = Math.max(id, c.getId());
             }
+            id += 1;
         }
-        return id+1;
+
+        return id;
+    }
+
+    public static boolean buscarMatricula(String matricula, LinkedList<Clientes> listaClientes){
+        boolean localizado = false;
+
+        for (Clientes c : listaClientes){
+            localizado = matricula.equalsIgnoreCase(c.getMatricula());
+        }
+
+        return localizado;
     }
 }

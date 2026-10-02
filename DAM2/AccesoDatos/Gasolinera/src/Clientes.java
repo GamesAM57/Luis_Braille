@@ -1,20 +1,21 @@
+import java.util.Locale;
+
 public class Clientes implements Comparable<Clientes> {
     public static int siguienteIdCliente;
     private int id;
     private String nombre;
     private String telefono;
     private String matricula;
-    private Terminal terminal;
 
     public Clientes() {
     }
 
-    public Clientes(int id, String nombre, String telefono, String matricula, Terminal terminal) {
+    public Clientes(int id, String nombre, String telefono, String matricula) {
         this.id = id;
-        setNombre(nombre.trim());
-        setTelefono(telefono.trim());
-        setMatricula(matricula.trim());
-        this.terminal = terminal;
+        setNombre(nombre);
+        this.nombre = nombre.trim();
+        this.telefono = telefono.trim();
+        this.matricula = matricula.trim().toUpperCase();
     }
 
     public int getId() {
@@ -25,33 +26,16 @@ public class Clientes implements Comparable<Clientes> {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        while(isVacio(nombre)){
-            nombre = terminal.pedirString("El nombre no puede estar vacío, indicalo otra vez:");
-        }
-        this.nombre = nombre.strip();
-    }
-
     public String getTelefono() {
         return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        while(isVacio(telefono)){
-            telefono = terminal.pedirString("El telefono no puede estar vacío, indicalo otra vez:");
-        }
-        this.telefono = telefono.strip();
     }
 
     public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(String matricula) {
-        while( isVacio(matricula)){
-            matricula = terminal.pedirString("La matricula no puede estar vacía, indicala otra vez:");
-        }
-        this.matricula = matricula.strip().toUpperCase();
+    public void setNombre(String nombre) {
+        this.nombre = Character.toUpperCase(nombre.charAt(0))+nombre.substring(1);
     }
 
     @Override
@@ -66,9 +50,5 @@ public class Clientes implements Comparable<Clientes> {
             i = this.id-o.getId();
         }
         return i;
-    }
-
-    public boolean isVacio(String s){
-        return s == null || s.isBlank();
     }
 }
