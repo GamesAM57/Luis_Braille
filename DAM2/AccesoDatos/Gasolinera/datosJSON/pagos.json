@@ -1,11 +1,7 @@
 {
  [
-  {"id": "5","nombre": "Abel","telefono": "8888","matricula": "983MMM"},
-  {"id": "2","nombre": "Jaime","telefono": "234","matricula": "99MMM"},
-  {"id": "1","nombre": "Liam","telefono": "8888","matricula": "0000PP"},
-  {"id": "4","nombre": "Liam","telefono": "8763","matricula": "888XXX"},
-  {"id": "3","nombre": "Lucas","telefono": "8765","matricula": "555XXX"},
-  {"id": "6","nombre": "Paul","telefono": "837656477","matricula": "9JJP"},
-  {"id": "2","cliente": "null","fecha": "20/06/2027","importe": "9.0","litros": "9.0","combustible": "petrol"},
-  {"id": "3","cliente": "null","fecha": "02/10/2026","importe": "33.0","litros": "2.0","combustible": "Limpio"},
-  {"id": "1","cliente": "null","fecha": "02/10/2026","importe": "80.0","litros": "9.0","combustible": "Gas"},
+  {"id": 2,"cliente": 2,"fecha": "20/06/2027","importe": 9.0,"litros": 9.0,"combustible": "petrol"},
+  {"id": 3,"cliente": 3,"fecha": "02/10/2026","importe": 33.0,"litros": 2.0,"combustible": "Limpio"},
+  {"id": 1,"cliente": 2,"fecha": "02/10/2026","importe": 80.0,"litros": 9.0,"combustible": "Gas"}
+ ]
+}

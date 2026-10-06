@@ -8,7 +8,8 @@ public class Main {
             MigraCSVToJSON.menuMigracion(terminal);
 
             GestionFicherosJSON json = new GestionFicherosJSON(terminal);
-
+            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(json.getClientes());
+            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(json.getPagos());
 
             int op;
 
@@ -16,7 +17,7 @@ public class Main {
                 op = terminal.menu();
                 switch (op) {
                     case 1 -> {
-                        GestionClientes.crearCliente(terminal, json.getClientes());
+                        GestionClientes.crearCliente(terminal, json.getClientes(),  json);
                     }
                     case 2 -> {
                         GestionClientes.listarClientes(terminal, json.getClientes());
@@ -25,7 +26,7 @@ public class Main {
                         GestionClientes.buscarClientes(terminal,json.getClientes());
                     }
                     case 4 -> {
-                        GestionPagos.registrarPago( terminal,  json.getClientes(), json.getPagos());
+                        GestionPagos.registrarPago( terminal,  json.getClientes(), json.getPagos(), json);
                     }
                     case 5 -> {
                         GestionPagos.consultarPagos(terminal, json.getPagos(), json.getClientes());
@@ -39,8 +40,6 @@ public class Main {
                 }
             } while (op != 0);
 
-            json.cerrarFichClientes();
-            json.cerrarFichPagos();
             terminal.cerrarScanner();
         } catch (IOException e){
             terminal.mostrar("Error al crear o acceder a ficheros, comprueba permisos. "+e.getMessage());

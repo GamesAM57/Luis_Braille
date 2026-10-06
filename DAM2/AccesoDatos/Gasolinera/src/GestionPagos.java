@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class GestionPagos {
-    public static void registrarPago(Terminal terminal, LinkedList<Clientes> listaClientes, LinkedList<Pagos> listaPagos){
+    public static void registrarPago(Terminal terminal, LinkedList<Clientes> listaClientes, LinkedList<Pagos> listaPagos, GestionFicherosJSON json){
         int idCliente;
 
         if (listaClientes.isEmpty())
@@ -30,9 +30,9 @@ public class GestionPagos {
                 String combustible = terminal.pedirStringObligatorio("Indica el combustible utilizado: ");
 
                 Pagos p = new Pagos(Pagos.siguienteIdPago, idCliente, fecha, importe, litros, combustible, terminal);
+                json.setPagos(p);
                 terminal.mostrar("Pago "+p.getId()+" registrado para "+c.getNombre()+": "+p.getImporte()+" euros.");
                 Pagos.siguienteIdPago += 1;
-                listaPagos.add(p);
             } else
                 terminal.mostrar("No existe el cliente.");
         }

@@ -3,7 +3,7 @@ import java.util.*;
 public class GestionClientes {
 
 
-    public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes){
+    public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes, GestionFicherosJSON json){
 
 
         String nombre    = terminal.pedirStringObligatorio("Nombre: ");
@@ -11,8 +11,8 @@ public class GestionClientes {
         String matricula = terminal.pedirStringObligatorio("Matrícula: ").toUpperCase();
 
         if (!buscarMatricula(matricula, listaClientes)){
-            () -> json
-            new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
+            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
+            json.setClientes(c);
             terminal.mostrar("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
         } else {
@@ -33,7 +33,7 @@ public class GestionClientes {
         }
     }
 
-    public static void buscarClientes(Terminal terminal, LinkedList<Clientes> listaClientes){ //Hacer que devuelva lista de correlaciones, otro metodo mostrará el cliente
+    public static void buscarClientes(Terminal terminal, LinkedList<Clientes> listaClientes){
         String palabra = terminal.pedirStringObligatorio("Indica palabra a buscar: ").toLowerCase();
 
         LinkedList<Clientes> coincidencias = new LinkedList<>();

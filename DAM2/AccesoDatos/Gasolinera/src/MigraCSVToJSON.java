@@ -10,18 +10,12 @@ public class MigraCSVToJSON {
     static Path fichPagos = Path.of("pagos.json");
 
     public static void menuMigracion(Terminal terminal) throws IOException {
-        GestionFicherosJSON json;
         if(comprobacionFicherosJSON()){
             terminal.mostrar("Existen ficheros JSON creados.");
-            json = new GestionFicherosJSON(terminal);
-            json.prepararFich(fichClientes);
-            json.prepararFich(fichPagos);
         } else {
             String op = terminal.pedirStringObligatorio("Indica si o no para la migración CSV a JSON: ").toLowerCase();
             GestionFicherosCSV csv = new GestionFicherosCSV(terminal);
-            json = new GestionFicherosJSON(terminal);
-            json.primerasLineas(fichClientes);
-            json.primerasLineas(fichPagos);
+            GestionFicherosJSON json = new GestionFicherosJSON(terminal);
             if(op.equals("si")){
                 LinkedList<Clientes> listaClientes = csv.getClientes();
                 LinkedList<Pagos> listaPagos = csv.getPagos();
