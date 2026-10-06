@@ -5,12 +5,10 @@ public class Main {
     public static void main(String[] args) {
         Terminal terminal = new Terminal();
         try{
-            GestionFicherosCSV gestorFich = new GestionFicherosCSV(terminal);
-            LinkedList<Clientes> listaClientes = gestorFich.getClientes();
-            LinkedList<Pagos> listaPagos = gestorFich.getPagos();
+            MigraCSVToJSON.menuMigracion(terminal);
 
-            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(listaClientes);
-            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(listaPagos);
+            GestionFicherosJSON json = new GestionFicherosJSON(terminal);
+
 
             int op;
 
@@ -18,19 +16,19 @@ public class Main {
                 op = terminal.menu();
                 switch (op) {
                     case 1 -> {
-                        GestionClientes.crearCliente(terminal, listaClientes);
+                        GestionClientes.crearCliente(terminal, json.getClientes());
                     }
                     case 2 -> {
-                        GestionClientes.listarClientes(terminal, listaClientes);
+                        GestionClientes.listarClientes(terminal, json.getClientes());
                     }
                     case 3 -> {
-                        GestionClientes.buscarClientes(terminal,listaClientes);
+                        GestionClientes.buscarClientes(terminal,json.getClientes());
                     }
                     case 4 -> {
-                        GestionPagos.registrarPago( terminal,  listaClientes, listaPagos);
+                        GestionPagos.registrarPago( terminal,  json.getClientes(), json.getPagos());
                     }
                     case 5 -> {
-                        GestionPagos.consultarPagos(terminal, listaPagos, listaClientes);
+                        GestionPagos.consultarPagos(terminal, json.getPagos(), json.getClientes());
                     }
                     case 0 -> {
                         terminal.mostrar("Hasta pronto!!");
@@ -41,8 +39,8 @@ public class Main {
                 }
             } while (op != 0);
 
-            gestorFich.setClientes(listaClientes);
-            gestorFich.setPagos(listaPagos);
+            json.cerrarFichClientes();
+            json.cerrarFichPagos();
             terminal.cerrarScanner();
         } catch (IOException e){
             terminal.mostrar("Error al crear o acceder a ficheros, comprueba permisos. "+e.getMessage());

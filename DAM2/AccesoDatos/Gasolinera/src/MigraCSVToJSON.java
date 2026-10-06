@@ -1,0 +1,58 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.LinkedList;
+
+public class MigraCSVToJSON {
+
+    static Path directorio = Path.of("datosJSON");
+    static Path fichClientes = Path.of("clientes.json");
+    static Path fichPagos = Path.of("pagos.json");
+
+    public static void menuMigracion(Terminal terminal) throws IOException {
+        GestionFicherosJSON json;
+        if(comprobacionFicherosJSON()){
+            terminal.mostrar("Existen ficheros JSON creados.");
+            json = new GestionFicherosJSON(terminal);
+            json.prepararFich(fichClientes);
+            json.prepararFich(fichPagos);
+        } else {
+            String op = terminal.pedirStringObligatorio("Indica si o no para la migración CSV a JSON: ").toLowerCase();
+            GestionFicherosCSV csv = new GestionFicherosCSV(terminal);
+            json = new GestionFicherosJSON(terminal);
+            json.primerasLineas(fichClientes);
+            json.primerasLineas(fichPagos);
+            if(op.equals("si")){
+                LinkedList<Clientes> listaClientes = csv.getClientes();
+                LinkedList<Pagos> listaPagos = csv.getPagos();
+                int contClientes = 0;
+                int contPagos = 0;
+
+                for (Clientes c : listaClientes){
+                    json.setClientes(c);
+                    contClientes ++;
+                }
+
+                for (Pagos p : listaPagos){
+                    json.setPagos(p);
+                    contPagos++;
+                }
+
+                terminal.mostrar("Se han migrado "+contClientes+" clientes y "+contPagos+" pagos a lod ficheros:");
+                terminal.mostrar("- "+fichClientes.toString());
+                terminal.mostrar("- "+fichPagos.toString());
+
+            } else if (op.equals("no")){
+                terminal.mostrar("0 clientes y pagos migrados.");
+            } else {
+                terminal.mostrar("No has indicado una opción valida para la migración.");
+            }
+        }
+    }
+
+    public static boolean comprobacionFicherosJSON(){
+
+
+        return Files.exists(directorio)&&Files.exists(fichClientes)&&Files.exists(fichPagos);
+    }
+}

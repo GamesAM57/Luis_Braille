@@ -2,17 +2,19 @@ import java.util.*;
 
 public class GestionClientes {
 
+
     public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes){
+
 
         String nombre    = terminal.pedirStringObligatorio("Nombre: ");
         String telefono  = terminal.pedirStringObligatorio("Teléfono: ");
         String matricula = terminal.pedirStringObligatorio("Matrícula: ").toUpperCase();
 
         if (!buscarMatricula(matricula, listaClientes)){
-            Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
+            () -> json
+            new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
             terminal.mostrar("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
-            listaClientes.add(c);
         } else {
             terminal.mostrar("Ya existe un cliente con esa matricula.");
         }
