@@ -2,6 +2,6 @@
  [
   {"id": 2,"cliente": 2,"fecha": "20/06/2027","importe": 9.0,"litros": 9.0,"combustible": "petrol"},
   {"id": 3,"cliente": 3,"fecha": "02/10/2026","importe": 33.0,"litros": 2.0,"combustible": "Limpio"},
-  {"id": 1,"cliente": 2,"fecha": "02/10/2026","importe": 80.0,"litros": 9.0,"combustible": "Gas"}
- ]
+  {"id": 1,"cliente": 2,"fecha": "02/10/2026","importe": 80.0,"litros": 9.0,"combustible": "Gas"} 
+]
 }

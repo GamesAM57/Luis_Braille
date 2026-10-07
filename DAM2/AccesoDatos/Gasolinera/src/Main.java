@@ -7,9 +7,9 @@ public class Main {
         try{
             MigraCSVToJSON.menuMigracion(terminal);
 
-            GestionFicherosJSON json = new GestionFicherosJSON(terminal);
-            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(json.getClientes());
-            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(json.getPagos());
+            GestionFicheros fich = new GestionFicherosJSON(terminal);
+            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(fich.getClientes());
+            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(fich.getPagos());
 
             int op;
 
@@ -17,19 +17,19 @@ public class Main {
                 op = terminal.menu();
                 switch (op) {
                     case 1 -> {
-                        GestionClientes.crearCliente(terminal, json.getClientes(),  json);
+                        GestionClientes.crearCliente(terminal, fich.getClientes(),  fich);
                     }
                     case 2 -> {
-                        GestionClientes.listarClientes(terminal, json.getClientes());
+                        GestionClientes.listarClientes(terminal, fich.getClientes());
                     }
                     case 3 -> {
-                        GestionClientes.buscarClientes(terminal,json.getClientes());
+                        GestionClientes.buscarClientes(terminal,fich.getClientes());
                     }
                     case 4 -> {
-                        GestionPagos.registrarPago( terminal,  json.getClientes(), json.getPagos(), json);
+                        GestionPagos.registrarPago( terminal,  fich.getClientes(), fich);
                     }
                     case 5 -> {
-                        GestionPagos.consultarPagos(terminal, json.getPagos(), json.getClientes());
+                        GestionPagos.consultarPagos(terminal, fich.getPagos(), fich.getClientes());
                     }
                     case 0 -> {
                         terminal.mostrar("Hasta pronto!!");

@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.LinkedList;
 
 public class MigraCSVToJSON {
 
@@ -17,27 +16,15 @@ public class MigraCSVToJSON {
             GestionFicherosCSV csv = new GestionFicherosCSV(terminal);
             GestionFicherosJSON json = new GestionFicherosJSON(terminal);
             if(op.equals("si")){
-                LinkedList<Clientes> listaClientes = csv.getClientes();
-                LinkedList<Pagos> listaPagos = csv.getPagos();
-                int contClientes = 0;
-                int contPagos = 0;
+                json.setClientes(csv.getClientes());
+                json.setPagos(csv.getPagos());
 
-                for (Clientes c : listaClientes){
-                    json.setClientes(c);
-                    contClientes ++;
-                }
-
-                for (Pagos p : listaPagos){
-                    json.setPagos(p);
-                    contPagos++;
-                }
-
-                terminal.mostrar("Se han migrado "+contClientes+" clientes y "+contPagos+" pagos a lod ficheros:");
+                terminal.mostrar("Se han migrado "+json.getClientes().size()+" clientes y "+json.getPagos().size()+" pagos a los ficheros:");
                 terminal.mostrar("- "+fichClientes.toString());
                 terminal.mostrar("- "+fichPagos.toString());
 
             } else if (op.equals("no")){
-                terminal.mostrar("0 clientes y pagos migrados.");
+                terminal.mostrar("0 clientes y 0 pagos migrados.");
             } else {
                 terminal.mostrar("No has indicado una opción valida para la migración.");
             }

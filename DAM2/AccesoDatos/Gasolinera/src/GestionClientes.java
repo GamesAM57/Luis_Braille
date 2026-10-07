@@ -3,7 +3,7 @@ import java.util.*;
 public class GestionClientes {
 
 
-    public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes, GestionFicherosJSON json){
+    public static void crearCliente(Terminal terminal, LinkedList<Clientes> listaClientes, GestionFicheros fich){
 
 
         String nombre    = terminal.pedirStringObligatorio("Nombre: ");
@@ -12,7 +12,7 @@ public class GestionClientes {
 
         if (!buscarMatricula(matricula, listaClientes)){
             Clientes c = new Clientes(Clientes.siguienteIdCliente, nombre, telefono, matricula);
-            json.setClientes(c);
+            fich.setUnCliente(c);
             terminal.mostrar("Cliente creado con id: " + c.getId());
             Clientes.siguienteIdCliente += 1;
         } else {

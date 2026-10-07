@@ -5,6 +5,6 @@
   {"id: 1,nombre": "Liam","telefono": "8888","matricula": "0000PP"},
   {"id: 4,nombre": "Liam","telefono": "8763","matricula": "888XXX"},
   {"id: 3,nombre": "Lucas","telefono": "8765","matricula": "555XXX"},
-  {"id: 6,nombre": "Paul","telefono": "837656477","matricula": "9JJP"}
- ]
+  {"id: 6,nombre": "Paul","telefono": "837656477","matricula": "9JJP"} 
+]
 }

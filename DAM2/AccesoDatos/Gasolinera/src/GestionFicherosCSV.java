@@ -99,4 +99,18 @@ public class GestionFicherosCSV implements GestionFicheros {
             terminal.mostrar("Error al guardar clientes. "+e.getMessage());
         }
     }
+
+    @Override
+    public void setUnPago(Pagos p) {
+        LinkedList<Pagos> listaPagos = getPagos();
+        listaPagos.add(p);
+        setPagos(listaPagos);
+    }
+
+    @Override
+    public void setUnCliente(Clientes c) {
+        LinkedList<Clientes> listaClientes = getClientes();
+        listaClientes.add(c);
+        setClientes(listaClientes);
+    }
 }
