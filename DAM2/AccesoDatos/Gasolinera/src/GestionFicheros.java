@@ -5,4 +5,6 @@ public interface GestionFicheros {
     LinkedList<Clientes>  getClientes();
     void setPagos(LinkedList<Pagos> listaPagos);
     void setClientes(LinkedList<Clientes> listaClientes);
+    void setUnPago(Pagos p);
+    void setUnCliente(Clientes c);
 }
