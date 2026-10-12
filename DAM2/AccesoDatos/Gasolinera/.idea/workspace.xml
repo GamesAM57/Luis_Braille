@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dca5d13c-8328-4770-9542-d30e0768a334" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gasolinera.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cb2658fd-fa9c-4e73-9025-c1cd1b56dffd_Prctica_1_gestin_de_clientes_y_repostajes_de_una_gasolinera.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/clientes.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/pagos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datosJSON/clientes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datosJSON/pagos.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagos.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionClientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionFicherosCSV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionFicherosJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionPagos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MigraCSVToJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pagos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terminal.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.054817439175358E-14" />
+      <entry key="MS500" value="0.001606649035522865" />
+      <entry key="S2" value="0.24674295413052028" />
+      <entry key="S5" value="0.8245070763351753" />
+      <entry key="S10" value="1.3648222717200476" />
+      <entry key="S30" value="3.0086744430970795" />
+      <entry key="S60" value="5.316983094090407" />
+      <entry key="M2" value="8.580507684783795" />
+      <entry key="M5" value="14.046406748666817" />
+      <entry key="M10" value="18.862900330708143" />
+      <entry key="M15" value="21.508114581264092" />
+      <entry key="M30" value="25.07711766706286" />
+      <entry key="H1" value="27.33501302991576" />
+      <entry key="H2" value="28.61151969359465" />
+      <entry key="H4" value="29.29106651577021" />
+      <entry key="D1" value="31.359328031075144" />
+      <entry key="W1" value="76.66853126010963" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000011741108068" />
+      <entry key="MS500" value="1.065154110052585" />
+      <entry key="S2" value="1.505830824794105" />
+      <entry key="S5" value="1.8674601974396958" />
+      <entry key="S10" value="2.5098295788242475" />
+      <entry key="S30" value="4.2337946343380075" />
+      <entry key="S60" value="5.762871700232338" />
+      <entry key="M2" value="8.436776019388951" />
+      <entry key="M5" value="13.84553789313079" />
+      <entry key="M10" value="18.4921244925916" />
+      <entry key="M15" value="20.991005666250345" />
+      <entry key="M30" value="24.349462097775056" />
+      <entry key="H1" value="26.47783053540189" />
+      <entry key="H2" value="27.684329227001154" />
+      <entry key="H4" value="28.327778500512633" />
+      <entry key="D1" value="29.883512460936757" />
+      <entry key="W1" value="60.47917583201122" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.2779234244267623E-4" />
+      <entry key="MS500" value="0.20386355306273474" />
+      <entry key="S2" value="1.2265135521489468" />
+      <entry key="S5" value="2.37731704992026" />
+      <entry key="S10" value="3.654607937508722" />
+      <entry key="S30" value="7.106358218627046" />
+      <entry key="S60" value="10.973586196654006" />
+      <entry key="M2" value="16.928619860917596" />
+      <entry key="M5" value="27.82632202827831" />
+      <entry key="M10" value="37.30860199011455" />
+      <entry key="M15" value="42.46323997288651" />
+      <entry key="M30" value="49.405324719954855" />
+      <entry key="H1" value="53.801167928207185" />
+      <entry key="H2" value="56.289714596433406" />
+      <entry key="H4" value="57.61569887919262" />
+      <entry key="D1" value="61.242275212577965" />
+      <entry key="W1" value="137.1474982241181" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Je6eet7lxAR7CTbf5sxiKBiERK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/liam/Documents/Luis_Braille/DAM2/AccesoDatos/Gasolinera",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dca5d13c-8328-4770-9542-d30e0768a334" name="Changes" comment="" />
+      <created>1790009284559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790009284559</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

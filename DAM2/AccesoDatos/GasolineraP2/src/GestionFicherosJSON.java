@@ -5,7 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class GestionFicherosJSON implements GestionFicheros{
@@ -101,20 +100,9 @@ public class GestionFicherosJSON implements GestionFicheros{
 
     @Override
     public void setUnPago(Pagos p) {
-        try(BufferedWriter bf = Files.newBufferedWriter(fichPagos, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
-            LinkedList<Pagos> listaPagos = getPagos();
-            listaPagos.add(p);
-            bf.write(INICIO_FICHERO);
-
-            String lineaPagos = listaPagos.stream().map(this::pagoToJSON).reduce(
-                    (String s1, String s2) -> {return s1+",\n"+s2;}
-            ).orElse("");
-            bf.write(lineaPagos);
-
-            bf.write(FINAL_FICHERO);
-        } catch (IOException e){
-            terminal.mostrar("Error al guardar pagos. "+e.getMessage());
-        }
+        LinkedList<Pagos> listaPagos = getPagos();
+        listaPagos.add(p);
+        setPagos(listaPagos);
     }
 
     @Override
@@ -135,20 +123,9 @@ public class GestionFicherosJSON implements GestionFicheros{
 
     @Override
     public void setUnCliente(Clientes c) {
-        try(BufferedWriter bf = Files.newBufferedWriter(fichClientes, StandardCharsets.UTF_8, StandardOpenOption.CREATE)){
-            LinkedList<Clientes> listaClientes = getClientes();
-            listaClientes.add(c);
-            bf.write(INICIO_FICHERO);
-
-            String lineaClientes = listaClientes.stream().map(this::clienteToJSON).reduce(
-                    (String s1, String s2) -> {return s1+",\n"+s2;}
-            ).orElse("");
-
-            bf.write(lineaClientes);
-            bf.write(FINAL_FICHERO);
-        } catch (IOException e){
-            terminal.mostrar("Error al guardar clientes. "+e.getMessage());
-        }
+        LinkedList<Clientes> listaClientes = getClientes();
+        listaClientes.add(c);
+        setClientes(listaClientes);
     }
 
     public String pagoToJSON(Pagos p){ return "  {\"id\": "+p.getId()+",\"cliente\": "+p.getIdCliente()+",\"fecha\": \""+p.getFechaRepostaje()+"\",\"importe\": "+p.getImporte()+",\"litros\": "+p.getLitros()+",\"combustible\": \""+p.getCombusitble()+"\"}"; }

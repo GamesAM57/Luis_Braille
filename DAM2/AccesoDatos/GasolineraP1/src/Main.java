@@ -5,11 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Terminal terminal = new Terminal();
         try{
-            MigraCSVToJSON.menuMigracion(terminal);
+            GestionFicherosCSV gestorFich = new GestionFicherosCSV(terminal);
+            LinkedList<Clientes> listaClientes = gestorFich.getClientes();
+            LinkedList<Pagos> listaPagos = gestorFich.getPagos();
 
-            GestionFicheros fich = new GestionFicherosJSON(terminal);
-            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(fich.getClientes());
-            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(fich.getPagos());
+            Clientes.siguienteIdCliente = GestionClientes.ultimoIdClientes(listaClientes);
+            Pagos.siguienteIdPago = GestionPagos.ultimoIdPagos(listaPagos);
 
             int op;
 
@@ -17,19 +18,19 @@ public class Main {
                 op = terminal.menu();
                 switch (op) {
                     case 1 -> {
-                        GestionClientes.crearCliente(terminal, fich.getClientes(),  fich);
+                        GestionClientes.crearCliente(terminal, listaClientes);
                     }
                     case 2 -> {
-                        GestionClientes.listarClientes(terminal, fich.getClientes());
+                        GestionClientes.listarClientes(terminal, listaClientes);
                     }
                     case 3 -> {
-                        GestionClientes.buscarClientes(terminal,fich.getClientes());
+                        GestionClientes.buscarClientes(terminal,listaClientes);
                     }
                     case 4 -> {
-                        GestionPagos.registrarPago( terminal,  fich.getClientes(), fich);
+                        GestionPagos.registrarPago( terminal,  listaClientes, listaPagos);
                     }
                     case 5 -> {
-                        GestionPagos.consultarPagos(terminal, fich.getPagos(), fich.getClientes());
+                        GestionPagos.consultarPagos(terminal, listaPagos, listaClientes);
                     }
                     case 0 -> {
                         terminal.mostrar("Hasta pronto!!");
@@ -40,6 +41,8 @@ public class Main {
                 }
             } while (op != 0);
 
+            gestorFich.setClientes(listaClientes);
+            gestorFich.setPagos(listaPagos);
             terminal.cerrarScanner();
         } catch (IOException e){
             terminal.mostrar("Error al crear o acceder a ficheros, comprueba permisos. "+e.getMessage());
