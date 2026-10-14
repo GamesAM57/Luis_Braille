@@ -62,6 +62,8 @@ public class Jugador {
     }
     
     
-    
+    public boolean isVivo(){
+        return vidasActuales > 0;
+    }
     
 }

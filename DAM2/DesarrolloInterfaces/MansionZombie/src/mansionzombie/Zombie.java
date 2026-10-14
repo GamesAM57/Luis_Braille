@@ -9,10 +9,14 @@ public class Zombie extends Personaje{
     public static int generarPuntos(int habActual){
         return (int) (Math.random()*2)+2+(habActual-1); 
     }
+    
+    public boolean isVivo(){
+        return getPuntosVida()>0;
+    }
 
     @Override
     public String toString() {
-        return "Zombie{" + "puntosVida=" + puntosVida + ", puntosAtaque=" + puntosAtaque + '}';
+        return "Zombie{" + "puntosVida=" + getPuntosVida() + ", puntosAtaque=" + getPuntosAtaque() + '}';
     }
     
     

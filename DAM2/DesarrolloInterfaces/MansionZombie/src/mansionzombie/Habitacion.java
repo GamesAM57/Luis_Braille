@@ -5,6 +5,7 @@ public class Habitacion {
     
     private int busquedas;
     private int contZombie;
+    public static int habitacionesMax;
 
     public Habitacion() {
         busquedas = 3;
@@ -27,6 +28,8 @@ public class Habitacion {
         this.habActual = habActual;
     }
     
-    
+    public boolean hayZombies(){
+        return contZombie > 0;
+    }
 
 }
