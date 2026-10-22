@@ -1,24 +1,55 @@
 package mansionzombie;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class Menu {
-    
-    static Scanner sc = new Scanner(System.in);
     
     public static int menuDificultades(){
         int num = 0;
         
         do {
-            System.out.println("Elige el número de la dificultad:");
-            System.out.println("\t1. Fácil(5 habitaciones).");
-            System.out.println("\t2. Dificil(10 habitaciones).");
-            num = sc.nextInt();
+            Terminal.mostrar("""
+                             Elige el número de la dificultad:
+                             \t1. Fácil(5 habitaciones).
+                             \t2. Dificil(10 habitaciones).
+                             """);
+            num = Terminal.pedirInt();
         } while (num < 1 || num > 2);
         
         
         return (num == 1) ? 5 : 10;
+    }
+    
+    static void gestorMenu(Jugador j, Habitacion h){
+        
+        boolean salir = false;
+        
+        while(!salir){ 
+            if(j.isVivo()){
+                resumenJuego(h, j);
+                int op = mostrarMenu(j, h);
+                if(op == 1 && j.isVivo() && h.hayZombies()){
+                    Terminal.mostrar("Iniciando combate ...");
+                    GestorJuego.combatir(j, h);
+                    if(j.isVivo())
+                        h.setContZombie(h.getContZombie()-1);
+                } else if (op == 2 && j.isVivo() && !h.hayZombies() && h.getBusquedas() > 0){
+                    Terminal.mostrar("Buscando en la habitacion...");
+                    GestorJuego.buscar(h, j);
+                    h.setBusquedas(h.getBusquedas()-1);
+                } else if (op == 3 && j.isVivo() && !h.hayZombies() && j.isBotiquin()){
+                    Terminal.mostrar("Curando...");
+                    j.curar();
+                } else if(op == 4 && j.isVivo() && !h.hayZombies()){
+                    salir = true;
+                } else if (j.isVivo()) {
+                    Terminal.mostrar("Has indicado una opción inválida.");
+                }
+            } else {
+                salir = true;
+            }
+            
+        }
     }
     
     static int mostrarMenu(Jugador j, Habitacion h){
@@ -40,22 +71,25 @@ public class Menu {
         }
         
         for(String op : opciones){
-            System.out.println(op);
+            Terminal.mostrar(op);
         }
         
-        return sc.nextInt();
+        return Terminal.pedirInt();
     }
     
-    static void resumenJuego(int numHab, Jugador j){
-        System.out.println("=================================================");
-        System.out.println("Has entrado en la habitación: "+numHab+" de "+Habitacion.habitacionesMax+".");
-        System.out.println("Tienes "+j.getVidasActuales()+" vidas restantes de 20.");
+    static void resumenJuego(Habitacion h, Jugador j){
+        Terminal.mostrar("================================================="
+                + "\nHabitación: "+h.getHabActual()+" de "+Habitacion.habitacionesMax+" tiene "+h.getContZombie()+" zombie(s)."
+                + "\nTienes "+j.getPuntosVida()+" vidas restantes de 20.");
+        
         if(j.isBotiquin())
-            System.out.println("Tienes un botiquín.");
+            Terminal.mostrar("Tienes un botiquín.");
         else
-            System.out.println("No tienes botiquín");
-        System.out.println("Tienes "+j.getArmas()+" armas.");
-        System.out.println("Tienes "+j.getProtecciones()+" protecciones.");
-        System.out.println("=================================================");
+            Terminal.mostrar("No tienes botiquín");
+        
+        Terminal.mostrar("Tienes "+j.getArmas()+" armas."
+                + "\nTienes "+j.getProtecciones()+" protecciones."
+                        + "\n================================================="
+                        + "\nElije entre las siguientes opciones:");
     }
 }

@@ -4,30 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dca5d13c-8328-4770-9542-d30e0768a334" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gasolinera.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cb2658fd-fa9c-4e73-9025-c1cd1b56dffd_Prctica_1_gestin_de_clientes_y_repostajes_de_una_gasolinera.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datos/clientes.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datos/pagos.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datosJSON/clientes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datosJSON/pagos.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagos.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestionClientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestionFicheros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestionFicherosCSV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestionFicherosJSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestionPagos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MigraCSVToJSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pagos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Terminal.java" beforeDir="false" />
+    <list default="true" id="262a9d50-80df-4809-ba0b-578447330aa7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DesarrolloInterfaces/MansionZombie/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesarrolloInterfaces/MansionZombie/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/task-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,26 +105,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/liam/Documents/Luis_Braille/DAM2/AccesoDatos/Gasolinera",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liam/Documents/Luis_Braille/DAM2/AccesoDatos/Gasolinera&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

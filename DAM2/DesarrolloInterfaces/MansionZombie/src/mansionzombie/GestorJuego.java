@@ -1,45 +1,77 @@
 package mansionzombie;
 
 public class GestorJuego {
-    static void gestorMenu(Jugador j, Habitacion h){
+    
+    public static void combatir(Jugador j, Habitacion h){
+        Zombie z = new Zombie(h.getHabActual());
+        int ronda = 1;
         
-        boolean salir  = false;
+        int tiradaJugador;
+        int tiradaZombie;
         
-        while(!salir && j.isVivo()){
-            int op = Menu.mostrarMenu(j, h);
-        
-            if(op == 1 && j.isVivo() && h.hayZombies()){
-                combatir(j, h);
-            } else if(op == 2 && j.isVivo() && !h.hayZombies() && h.getBusquedas() > 0){
-                System.out.println("Vas a buscar");
-            } else if(op == 3 && j.isVivo() && !h.hayZombies() && j.isBotiquin()){
-                System.out.println("Vas a curarte.");
-            } else if(op == 4 && j.isVivo() && !h.hayZombies()){
-                salir = true;
+        while(j.isVivo() && z.isVivo()){
+            Terminal.mostrar("""
+                             Ronda "+ronda+":
+                              -Vidas jugador: "+j.getPuntosVida()
+                              -Vidas zombie: "+z.getPuntosVida()
+                             """);
+            
+            tiradaJugador = j.dado();
+            
+            System.out.println("Has tirado "+tiradaJugador+", más "+j.getArmas()+" de las armas que tienes.");
+            tiradaJugador += j.getArmas();
+            System.out.println("Total de daño: "+tiradaJugador);
+            z.recibirAtaque(tiradaJugador);
+            
+            if(z.isVivo()){
+                tiradaZombie = z.dado();
+                System.out.println("Zombie te ataca con "+tiradaZombie+", pero tienes "+j.getProtecciones()+" protecciones.");
+                tiradaZombie = Math.max(tiradaZombie-j.getProtecciones(), 0);
+                j.recibirAtaque(tiradaZombie);
+                System.out.println("Te ha hecho "+tiradaZombie+" de daño.");
             } else {
-                System.out.println("Has indicado una opción incorrecta.");
+                System.out.println("Has matado al zombie.");
+            }
+            
+            if(j.isVivo()){
+                ronda++;
             }
         }
     }
     
-    private static void combatir(Jugador j, Habitacion h){
-        Zombie z = new Zombie(h.getHabActual());
-        int ronda = 1;
+    public static void buscar(Habitacion h, Jugador j){
+        int tirada = dadoBusqueda();
         
-        while(j.isVivo() && z.isVivo()){
-            System.out.println("Ronda "+ronda+": ");
-            System.out.println(" -Vidas jugador: "+j.getVidasActuales());
-            System.out.println(" -Vidas zombie: "+z.getPuntosVida());
-            
-            //generar puntos ataque con fórmula y contando armas
-            //hacer daño a zombie sin generar negativos.
-            //mostrar resultado ataque
-            
-            if(z.isVivo()){
-                //generar puntos ataque zombie con fórmula y contando protección jugador
-                //hacer daño sin generar negativos
-                //mostrar resultado ataque
+        if(tirada >= 1 && tirada <= 75){
+            Terminal.mostrar("Cuidado has hecho ruido...");
+            tirada = dadoBusqueda();
+            if(tirada >= 1 && tirada <= 40){
+                Terminal.mostrar("Has tenido suerte, no hay zombies.");
+            } else if(tirada >= 41 && tirada <= 80){
+                Terminal.mostrar("Ha aparecido un zombie.");
+                h.setContZombie(h.getContZombie()+1);
+            } else if(tirada >= 81 && tirada <= 100){
+                Terminal.mostrar("Han aparecido dos zombies.");
+                h.setContZombie(h.getContZombie()+2);
             }
+        } else if (tirada >= 76 && tirada <= 90){
+            Terminal.mostrar("Has encontrado un botiquin.");
+            if(j.isBotiquin()){
+                Terminal.mostrar("Ya tienes uno.");
+            } else {
+                Terminal.mostrar("Botiquin añadido.");
+                j.setBotiquin(true);
+            }  
+        } else if (tirada >= 91 && tirada <= 95){
+            Terminal.mostrar("Has encontrado una proteccion.");
+            j.setProtecciones(j.getProtecciones()+1);
+        } else if (tirada >= 96 && tirada <= 100){
+            Terminal.mostrar("Has encontrado un arma.");
+            j.setArmas(j.getArmas()+1);
         }
+    }
+    
+    private static int dadoBusqueda(){
+        return (int) ((Math.random()*100)+1);
     }
 }

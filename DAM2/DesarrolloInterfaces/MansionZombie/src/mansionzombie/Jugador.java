@@ -1,35 +1,16 @@
 package mansionzombie;
 
-public class Jugador {
+public class Jugador extends Personaje{
     private final int VIDAS_MAX = 20;
-    private int vidasActuales;
-    private int puntosAtaque;
     private boolean botiquin;
     private int armas;
     private int protecciones;
 
     public Jugador() {
-        vidasActuales = 20;
-        puntosAtaque = 4;
+        super(20, 4);
         botiquin = false;
         armas = 0;
         protecciones = 0;
-    }
-
-    public int getVidasActuales() {
-        return vidasActuales;
-    }
-
-    public void setVidasActuales(int vidasActuales) {
-        this.vidasActuales = vidasActuales;
-    }
-
-    public int getPuntosAtaque() {
-        return puntosAtaque;
-    }
-
-    public void setPuntosAtaque(int puntosAtaque) {
-        this.puntosAtaque = puntosAtaque;
     }
 
     public boolean isBotiquin() {
@@ -55,15 +36,16 @@ public class Jugador {
     public void setProtecciones(int protecciones) {
         this.protecciones = protecciones;
     }
-
+    
+    public void curar(){
+        if(isBotiquin()){
+            setPuntosVida(Math.min(getPuntosVida()+4, VIDAS_MAX));
+            setBotiquin(false);
+        }
+    }
+    
     @Override
     public String toString() {
-        return "Jugador{" + "vidasActuales=" + vidasActuales + ", puntosAtaque=" + puntosAtaque + ", botiquin=" + botiquin + ", armas=" + armas + ", protecciones=" + protecciones + '}';
-    }
-    
-    
-    public boolean isVivo(){
-        return vidasActuales > 0;
-    }
-    
+        return "Jugador{" + "vidasActuales=" + getPuntosVida() + ", puntosAtaque=" + getPuntosAtaque() + ", botiquin=" + botiquin + ", armas=" + armas + ", protecciones=" + protecciones + '}';
+    }    
 }

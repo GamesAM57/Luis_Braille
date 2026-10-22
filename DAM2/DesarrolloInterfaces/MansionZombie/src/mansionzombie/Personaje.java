@@ -10,6 +10,18 @@ public abstract class Personaje {
         this.puntosVida = puntosVida;
         this.puntosAtaque = puntosAtaque;
     }
+    
+    public boolean isVivo(){
+        return puntosVida > 0;
+    }
+    
+    public void recibirAtaque(int ataque){
+        setPuntosVida(Math.max(getPuntosVida()-ataque, 0));
+    }
+    
+    public int dado(){
+        return (int) ((Math.random()*getPuntosAtaque())+1);
+    }
 
     public int getPuntosVida() {
         return puntosVida;

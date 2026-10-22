@@ -32,4 +32,14 @@ public class Habitacion {
         return contZombie > 0;
     }
 
+    public int getContZombie() {
+        return contZombie;
+    }
+
+    public void setContZombie(int contZombie) {
+        this.contZombie = contZombie;
+    }
+    
+    
+
 }

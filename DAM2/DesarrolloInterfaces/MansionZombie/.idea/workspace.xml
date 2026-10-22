@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32848e76-0c39-4a45-8455-fb11e4d1e6ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/AccesoDatos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/GasolineraP1/GasolineraP1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/GasolineraP2/GasolineraP2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AccesoDatos/Gasolinera/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AccesoDatos/Gasolinera/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AccesoDatos/GasolineraP2/cb2658fd-fa9c-4e73-9025-c1cd1b56dffd_Prctica_1_gestin_de_clientes_y_repostajes_de_una_gasolinera.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AccesoDatos/GasolineraP2/src/GestionFicherosCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AccesoDatos/GasolineraP2/src/GestionFicherosCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/9.8.0/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/.author_contents_storage_db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/.author_contents_storage_db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/.author_contents_storage_db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/externalDependencies.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_jspecify_jspecify_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_junit_platform_junit_platform_launcher_6_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/Ficheros_binarios_con_Java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/Ficheros_binarios_con_Java.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/Ficheros_binarios_con_Java.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/01_Bytes/Ficheros_binarios_con_Java.ficherosBinarios-01_Bytes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/01_Bytes/Ficheros_binarios_con_Java.ficherosBinarios-01_Bytes.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/01_Bytes/Ficheros_binarios_con_Java.ficherosBinarios-01_Bytes.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/02_InterpretarBytes/Ficheros_binarios_con_Java.ficherosBinarios-02_InterpretarBytes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/02_InterpretarBytes/Ficheros_binarios_con_Java.ficherosBinarios-02_InterpretarBytes.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/02_InterpretarBytes/Ficheros_binarios_con_Java.ficherosBinarios-02_InterpretarBytes.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/03_Escribir/Ficheros_binarios_con_Java.ficherosBinarios-03_Escribir.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/03_Escribir/Ficheros_binarios_con_Java.ficherosBinarios-03_Escribir.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/03_Escribir/Ficheros_binarios_con_Java.ficherosBinarios-03_Escribir.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/04_Leer/Ficheros_binarios_con_Java.ficherosBinarios-04_Leer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/04_Leer/Ficheros_binarios_con_Java.ficherosBinarios-04_Leer.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/04_Leer/Ficheros_binarios_con_Java.ficherosBinarios-04_Leer.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/05_TextoYBytes/Ficheros_binarios_con_Java.ficherosBinarios-05_TextoYBytes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/05_TextoYBytes/Ficheros_binarios_con_Java.ficherosBinarios-05_TextoYBytes.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/05_TextoYBytes/Ficheros_binarios_con_Java.ficherosBinarios-05_TextoYBytes.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/06_EscribirEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-06_EscribirEstructurado.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/06_EscribirEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-06_EscribirEstructurado.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/06_EscribirEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-06_EscribirEstructurado.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/07_LeerEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-07_LeerEstructurado.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/07_LeerEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-07_LeerEstructurado.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/07_LeerEstructurado/Ficheros_binarios_con_Java.ficherosBinarios-07_LeerEstructurado.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/08_ModificarBMP/Ficheros_binarios_con_Java.ficherosBinarios-08_ModificarBMP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/08_ModificarBMP/Ficheros_binarios_con_Java.ficherosBinarios-08_ModificarBMP.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/modules/ficherosBinarios/08_ModificarBMP/Ficheros_binarios_con_Java.ficherosBinarios-08_ModificarBMP.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/LICENSE-template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/course-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/classes/java/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/classes/java/test/Tests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/reports/tests/test/Tests/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/test-results/test/TEST-Tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/test-results/test/binary/output-events.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/test-results/test/binary/results-generic.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/out/production/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/01_Bytes/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/02_InterpretarBytes/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/03_Escribir/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/datos.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/04_Leer/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/05_TextoYBytes/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/06_EscribirEstructurado/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/cliente.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/07_LeerEstructurado/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/imagen.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/task-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/task-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/08_ModificarBMP/test/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/lesson-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/ficherosBinarios/lesson-remote-info.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProgramacionAppsMovil/Ficheros binarios con Java/settings.gradle.kts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3L2pxKjaMHdmxBOXHRafuW4eYo6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Users/Alumno mañana/Documents/Luis_Braille/DAM2/DesarrolloInterfaces/MansionZombie"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32848e76-0c39-4a45-8455-fb11e4d1e6ee" name="Changes" comment="" />
+      <created>1792662261424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792662261424</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
