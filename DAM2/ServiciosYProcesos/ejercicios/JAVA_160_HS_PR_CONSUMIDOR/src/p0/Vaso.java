@@ -7,9 +7,12 @@
 
 package p0;
 
+import java.util.HashMap;
+
 
 public class Vaso {
 
+    public HashMap<String, Integer> vasosMapa = new HashMap<String, Integer>();
     private boolean         lleno;          // false.
     private int             veces;          // 0. 
     private final long      retardo = 3000; // en milisegundos.
@@ -21,6 +24,10 @@ public class Vaso {
     // Métodos de consulta y asignación como los getters y setters:
     
     // ¿el vaso está lleno? ... devolver true equivale a sí.
+    public void aniadirCliente(String nomCliente){
+        vasosMapa.put(nomCliente, veces);
+    }
+    
     public boolean estaLLeno() {
         return lleno;
     }
@@ -37,14 +44,16 @@ public class Vaso {
     
     // incrementar el total de veces que se ha realizado el proceso.
     // se hará por un total de 3 veces.
-    public void incrementarVeces() {
-        veces++;
+    public void incrementarVeces(String nomCliente) {
+        if(vasosMapa.containsKey(nomCliente)){
+            vasosMapa.put(nomCliente, vasosMapa.get(nomCliente)+1);
+        }
     }
     
     // consulta el número de veces que se le ha llenado el vaso al cliente.
     // el atributo es private, luego utilizamos un método puente.
-    public int consultarVeces() {
-        return veces;
+    public int consultarVeces(String nomCliente) {
+        return vasosMapa.get(nomCliente);
     }
     
     // retardo de 3 segundos para ver "despacio" cómo se ejecuta el programa.
@@ -54,6 +63,18 @@ public class Vaso {
         } catch(InterruptedException ie) {
             System.out.println(ie);
         }
+    }
+
+    boolean neceistarLlenar() {
+        boolean necesitarLlenar = false;
+        for (int valor : vasosMapa.values()) {
+            if (valor < 3) {
+                return true;
+            }
+        }
+        
+        return false; 
+        
     }
 
 }

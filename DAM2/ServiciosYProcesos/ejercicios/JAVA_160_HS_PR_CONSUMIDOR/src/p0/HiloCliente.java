@@ -45,9 +45,9 @@ public class HiloCliente extends Thread {
         // producirá un error en ejecución.
         synchronized (vaso) {
 
-            while (vaso.consultarVeces() <= 3) {
+            while (vaso.consultarVeces(this.getName()) <= 3) {
                 if (!vaso.estaLLeno()) { // cuando el vaso está VACIO:
-                    System.out.println("\nEL CLIENTE DICE QUE EL VASO ESTA VACIO");
+                    System.out.println("\nEL CLIENTE "+this.getName()+" DICE QUE EL VASO ESTA VACIO");
                     vaso.notify(); // notificar al Scheduler que levante al hilo camarero.
                     try {
                         vaso.wait(); // el hilo cliente se pone en espera.
@@ -55,10 +55,10 @@ public class HiloCliente extends Thread {
                         System.out.println(ex);
                     }
                 } else { // cuando el vaso está LLENO: 
-                    System.out.println("\n>>>> " + vaso.consultarVeces() +
-                            " >>>> EL CLIENTE SE BEBE EL VASO ... GLU-GLU-GLU .. HIP!!!");
+                    System.out.println("\n>>>> " + vaso.consultarVeces(this.getName()) +
+                            " >>>> EL CLIENTE "+this.getName()+ "SE BEBE EL VASO ... GLU-GLU-GLU .. HIP!!!");
                     vaso.vaciarVaso();
-                    vaso.incrementarVeces(); // ES EL CLIENTE EL QUE INCREMENTA LAS VECES.
+                    vaso.incrementarVeces(this.getName()); // ES EL CLIENTE EL QUE INCREMENTA LAS VECES.
                     vaso.retardar();
                 }
             }

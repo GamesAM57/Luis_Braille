@@ -67,7 +67,7 @@ public class HiloCamarero extends Thread {
         synchronized (vaso) {
 
             // hacerlo 3 veces.
-            while (vaso.consultarVeces() <= 3) {
+            while (vaso.neceistarLlenar()) {
                 // si el vaso está lleno, el camareno no debe volverlo a llenar,
                 // luego se está quieto, se espera (waiting), e indica al planificador,
                 // el Scheduler, que ya no necesita usar el recurso compartido:
@@ -83,8 +83,7 @@ public class HiloCamarero extends Thread {
                     }
                 } else {
                     // si el vaso está vacio:
-                    System.out.println("\n>>>> " + vaso.consultarVeces() + 
-                            " >>>> EL CAMARERO LLENA EL VASO ... PARA ALIVIAR LAS PENAS!!!");
+                    System.out.println("\n>>>> EL CAMARERO LLENA EL VASO ... PARA ALIVIAR LAS PENAS!!!");
                     vaso.llenarVaso(); // cambiar el estado de la propiedad lleno de vaso.
                     vaso.retardar(); // provocar un retardo sleep (no suelta la llave).
                     

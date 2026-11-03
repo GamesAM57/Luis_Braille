@@ -18,16 +18,27 @@ public class Bar {
         HiloCamarero camarero = new HiloCamarero(vaso);
         
         // EL CONSUMIDOR.
-        HiloCliente cliente = new HiloCliente(vaso);
+        HiloCliente cliente1 = new HiloCliente(vaso);
+        HiloCliente cliente2 = new HiloCliente(vaso);
+        HiloCliente cliente3 = new HiloCliente(vaso);
+        
+        vaso.aniadirCliente(cliente1.getName()); 
+        vaso.aniadirCliente(cliente2.getName()); 
+        vaso.aniadirCliente(cliente3.getName()); 
         
         // Arranque de los hilos (no importa el orden).
-        cliente.start();
+        cliente1.start();
+        cliente2.start();
+        cliente3.start();
         camarero.start();        
         
         // Encolamiento de ambos con respecto al main.
         try {
-            cliente.join();
-            camarero.join();
+            cliente1.join(); 
+            cliente2.join(); 
+            cliente3.join(); 
+            camarero.join(); 
+            
         } catch(InterruptedException ie) {
             System.out.println("ERROR DE ENCOLAMIENTO");
             ie.printStackTrace();
