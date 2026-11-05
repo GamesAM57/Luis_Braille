@@ -27,17 +27,19 @@ public class Bar {
         vaso.aniadirCliente(cliente3.getName()); 
         
         // Arranque de los hilos (no importa el orden).
+        camarero.start();
         cliente1.start();
         cliente2.start();
         cliente3.start();
-        camarero.start();        
+                
         
         // Encolamiento de ambos con respecto al main.
         try {
+            camarero.join();
             cliente1.join(); 
             cliente2.join(); 
             cliente3.join(); 
-            camarero.join(); 
+             
             
         } catch(InterruptedException ie) {
             System.out.println("ERROR DE ENCOLAMIENTO");

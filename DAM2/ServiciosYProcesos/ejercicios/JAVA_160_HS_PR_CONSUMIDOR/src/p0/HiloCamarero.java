@@ -57,6 +57,7 @@ public class HiloCamarero extends Thread {
     // constructor para cargar el recurso compartido.
     public HiloCamarero(Vaso vaso) {
         this.vaso = vaso;
+        setPriority(MAX_PRIORITY);
     }
 
     // método run ... lo que debe hacer el hilo.
@@ -67,7 +68,7 @@ public class HiloCamarero extends Thread {
         synchronized (vaso) {
 
             // hacerlo 3 veces.
-            while (vaso.neceistarLlenar()) {
+            while (vaso.necesitarLlenar()) {
                 // si el vaso está lleno, el camareno no debe volverlo a llenar,
                 // luego se está quieto, se espera (waiting), e indica al planificador,
                 // el Scheduler, que ya no necesita usar el recurso compartido:

@@ -64,9 +64,10 @@ public class Vaso {
             System.out.println(ie);
         }
     }
-
-    boolean neceistarLlenar() {
-        boolean necesitarLlenar = false;
+/*
+    
+    */
+    boolean necesitarLlenar() {
         for (int valor : vasosMapa.values()) {
             if (valor < 3) {
                 return true;

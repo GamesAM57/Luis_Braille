@@ -35,6 +35,7 @@ public class HiloCliente extends Thread {
 
     public HiloCliente(Vaso vaso) {
         this.vaso = vaso;
+        setPriority(MIN_PRIORITY);
     }
 
     @Override
@@ -45,20 +46,21 @@ public class HiloCliente extends Thread {
         // producirá un error en ejecución.
         synchronized (vaso) {
 
-            while (vaso.consultarVeces(this.getName()) <= 3) {
+            while (vaso.consultarVeces(Thread.currentThread().getName()) <= 3) {
                 if (!vaso.estaLLeno()) { // cuando el vaso está VACIO:
-                    System.out.println("\nEL CLIENTE "+this.getName()+" DICE QUE EL VASO ESTA VACIO");
-                    vaso.notify(); // notificar al Scheduler que levante al hilo camarero.
+                    System.out.println("\nEL CLIENTE "+Thread.currentThread().getName()+" DICE QUE EL VASO ESTA VACIO");
+                    vaso.notify();// notificar al Scheduler que levante al hilo camarero.
                     try {
+                        vaso.retardar();
                         vaso.wait(); // el hilo cliente se pone en espera.
                     } catch (InterruptedException ex) {
                         System.out.println(ex);
                     }
                 } else { // cuando el vaso está LLENO: 
-                    System.out.println("\n>>>> " + vaso.consultarVeces(this.getName()) +
-                            " >>>> EL CLIENTE "+this.getName()+ "SE BEBE EL VASO ... GLU-GLU-GLU .. HIP!!!");
+                    System.out.println("\n>>>> " + vaso.consultarVeces(Thread.currentThread().getName()) +
+                            " >>>> EL CLIENTE "+Thread.currentThread().getName()+ "SE BEBE EL VASO ... GLU-GLU-GLU .. HIP!!!");
                     vaso.vaciarVaso();
-                    vaso.incrementarVeces(this.getName()); // ES EL CLIENTE EL QUE INCREMENTA LAS VECES.
+                    vaso.incrementarVeces(Thread.currentThread().getName()); // ES EL CLIENTE EL QUE INCREMENTA LAS VECES.
                     vaso.retardar();
                 }
             }
@@ -67,7 +69,7 @@ public class HiloCliente extends Thread {
                                             + " FIN DEL HILO CLIENTE.");
             
             // NO OLVIDAR ESTE NOTIFY O EL CAMARERO NO TERMINARÁ.
-            vaso.notify();
+            vaso.notifyAll();
             
             // Probar no obstante a comentarlo para ver cómo el hilo camarero NO TERMINA NÚNCA.
         }
