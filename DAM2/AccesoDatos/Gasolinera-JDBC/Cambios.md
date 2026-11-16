@@ -9,14 +9,14 @@ Este documento describe los cambios realizados al evolucionar el sistema de gest
 - **P2**: Almacenamiento en formato JSON
 
 ### 2. Nuevas Clases Añadidas
-- `GestionFicherosJSON.java`: Implementación de la interfaz `GestionFicheros` para trabajar con archivos JSON
-- `MigraCSVToJSON.java`: Utilidad para migrar datos existentes de CSV a JSON
+- `json.GestionFicherosJSON`: Implementación de la interfaz `GestionFicheros` para trabajar con archivos JSON
+- `json.MigraCSVToJSON`: Utilidad para migrar datos existentes de CSV a JSON
 
 ### 3. Modificaciones en Clases Existentes
-- **GestionClientes.java**: 
+- **json.GestionClientes.java**: 
   - Añadido parámetro `GestionFicheros fich` al método `crearCliente()`
   - El método ahora persiste inmediatamente cada nuevo cliente mediante `fich.setUnCliente(c)`
-- **Main.java**:
+- **json.Main.java**:
   - Añadida llamada inicial a `MigraCSVToJSON.menuMigracion(terminal)`
   - Cambiado de `GestionFicherosCSV` a `GestionFicherosJSON` como gestor de ficheros principal
   - Eliminado el guardado final de datos

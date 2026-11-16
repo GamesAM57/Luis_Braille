@@ -5,16 +5,16 @@
 ```
 GasolineraP2/
 ├── src/
-│   ├── Main.java              # Punto de entrada de la aplicación
-│   ├── Terminal.java          # Gestión de entrada/salida por consola
-│   ├── Clientes.java          # Modelo de datos para clientes
-│   ├── Pagos.java             # Modelo de datos para pagos/repostajes
-│   ├── GestionClientes.java   # Lógica de negocio para gestión de clientes
-│   ├── GestionPagos.java      # Lógica de negocio para gestión de pagos
-│   ├── GestionFicherosJSON.java # Manejo de archivos JSON
-│   ├── GestionFicherosCSV.java  # Manejo de archivos CSV (mantenido para migración)
-│   ├── GestionFicheros.java     # Interfaz para gestión de ficheros
-│   └── MigraCSVToJSON.java      # Utilidad para migrar de CSV a JSON
+│   ├── json.Main.java              # Punto de entrada de la aplicación
+│   ├── json.Terminal.java          # Gestión de entrada/salida por consola
+│   ├── json.Clientes.java          # Modelo de datos para clientes
+│   ├── json.Pagos.java             # Modelo de datos para pagos/repostajes
+│   ├── json.GestionClientes.java   # Lógica de negocio para gestión de clientes
+│   ├── json.GestionPagos.java      # Lógica de negocio para gestión de pagos
+│   ├── json.GestionFicherosJSON.java # Manejo de archivos JSON
+│   ├── json.GestionFicherosCSV.java  # Manejo de archivos CSV (mantenido para migración)
+│   ├── json.GestionFicheros.java     # Interfaz para gestión de ficheros
+│   └── json.MigraCSVToJSON.java      # Utilidad para migrar de CSV a JSON
 ├── datos/                     # Directorio para archivos CSV originales
 ├── datosJSON/                 # Directorio para archivos JSON
 ├── out/                       # Directorio de salida
@@ -33,36 +33,36 @@ Evolución del sistema de gestión de gasolinera que ahora utiliza formato JSON 
 
 ## Clases Principales
 
-### Main.java
+### json.Main.java
 Clase principal que inicia la aplicación:
 - Ejecuta primero la utilidad de migración si es necesario
 - Luego inicializa el sistema usando el gestor de ficheros JSON
 - Flujo similar a P1 pero adaptado para el nuevo sistema de ficheros
 
-### Terminal.java
+### json.Terminal.java
 Mantiene la misma funcionalidad que en P1 para interacción con consola.
 
-### Clientes.java y Pagos.java
+### json.Clientes.java y json.Pagos.java
 Modelos de datos idénticos a los de P1.
 
-### GestionClientes.java
-Modificada para aceptar un objeto GestionFicheros y persistir cambios inmediatamente:
+### json.GestionClientes.java
+Modificada para aceptar un objeto json.GestionFicheros y persistir cambios inmediatamente:
 - crearCliente(): Ahora persiste el nuevo cliente inmediatamente
 - Otros métodos mantienen la misma lógica que en P1
 
-### GestionPagos.java
+### json.GestionPagos.java
 Idéntica a la versión de P1 (no requiere cambios para funcionar con JSON).
 
-### GestionFicherosJSON.java
-Nueva implementación de la interfaz GestionFicheros para trabajar con JSON:
+### json.GestionFicherosJSON.java
+Nueva implementación de la interfaz json.GestionFicheros para trabajar con JSON:
 - Lectura/escritura de clientes y pagos en formato JSON
 - Formato JSON personalizado con estructura específica
 - Métodos para guardar individualmente o en lote
 
-### GestionFicherosCSV.java
+### json.GestionFicherosCSV.java
 Mantiene la implementación original de P1 para soportar la migración.
 
-### MigraCSVToJSON.java
+### json.MigraCSVToJSON.java
 Nueva clase utilitaria para migrar datos de CSV a JSON:
 - Verifica existencia de archivos necesarios
 - Solicita al usuario confirmación para migrar
@@ -71,7 +71,7 @@ Nueva clase utilitaria para migrar datos de CSV a JSON:
 
 ## Flujo de la Aplicación
 
-1. Al iniciar, ejecuta MigraCSVToJSON.menuMigracion() para verificar/migrar datos si es necesario
+1. Al iniciar, ejecuta json.MigraCSVToJSON.menuMigracion() para verificar/migrar datos si es necesario
 2. Inicializa el gestor de ficheros JSON
 3. Carga los datos desde los archivos JSON (o crea archivos vacíos si no existen)
 4. Inicializa los contadores de IDs basado en los datos existentes

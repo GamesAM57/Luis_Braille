@@ -1,3 +1,5 @@
+package json;
+
 import java.util.LinkedList;
 
 public interface GestionFicheros {

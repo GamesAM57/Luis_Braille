@@ -1,4 +1,4 @@
-import java.util.Locale;
+package json;
 
 public class Clientes implements Comparable<Clientes> {
     public static int siguienteIdCliente;
