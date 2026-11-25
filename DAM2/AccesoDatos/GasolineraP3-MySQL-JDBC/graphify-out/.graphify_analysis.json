@@ -1,0 +1,244 @@
+{
+  "communities": {
+    "0": [
+      "src_gestionclientes_gestionclientes_buscarclientes",
+      "src_gestionclientes_gestionclientes_listarclientes",
+      "src_gestionficheros_gestionficheros_getclientes",
+      "src_gestionficheros_gestionficheros_getpagos",
+      "src_gestionficherosjson_gestionficherosjson_gestionficherosjson",
+      "src_gestionpagos_gestionpagos_registrarpago",
+      "src_main",
+      "src_main_main",
+      "src_main_main_main",
+      "src_terminal",
+      "src_terminal_terminal",
+      "src_terminal_terminal_cerrarscanner",
+      "src_terminal_terminal_comprobardecimalescorrecto",
+      "src_terminal_terminal_limpiarscanner",
+      "src_terminal_terminal_menu",
+      "src_terminal_terminal_pedirdouble",
+      "src_terminal_terminal_pedirentero",
+      "src_terminal_terminal_pedirfecha",
+      "src_terminal_terminal_pedirstring",
+      "src_terminal_terminal_pedirstringobligatorio"
+    ],
+    "1": [
+      "src_clientes",
+      "src_clientes_clientes",
+      "src_clientes_clientes_clientes",
+      "src_clientes_clientes_compareto",
+      "src_clientes_clientes_getid",
+      "src_clientes_clientes_getmatricula",
+      "src_clientes_clientes_getnombre",
+      "src_clientes_clientes_gettelefono",
+      "src_clientes_clientes_setnombre",
+      "src_clientes_clientes_tostring",
+      "src_clientes_java_override",
+      "src_gestionclientes",
+      "src_gestionclientes_gestionclientes",
+      "src_gestionclientes_gestionclientes_buscarmatricula",
+      "src_gestionclientes_gestionclientes_crearcliente",
+      "src_gestionclientes_gestionclientes_obtenerclienteporid",
+      "src_gestionclientes_gestionclientes_ultimoidclientes",
+      "src_gestionficherosjson_gestionficherosjson_clientetojson",
+      "src_gestionpagos_gestionpagos_consultarpagos"
+    ],
+    "2": [
+      "src_gestionficherosjson_gestionficherosjson_pagotojson",
+      "src_pagos",
+      "src_pagos_java_override",
+      "src_pagos_pagos",
+      "src_pagos_pagos_compareto",
+      "src_pagos_pagos_formatfecha",
+      "src_pagos_pagos_getcombusitble",
+      "src_pagos_pagos_getfecharepostaje",
+      "src_pagos_pagos_getid",
+      "src_pagos_pagos_getidcliente",
+      "src_pagos_pagos_getimporte",
+      "src_pagos_pagos_getlitros",
+      "src_pagos_pagos_pagos",
+      "src_pagos_pagos_setcombusitble",
+      "src_pagos_pagos_setfecharepostaje",
+      "src_pagos_pagos_setimporte",
+      "src_pagos_pagos_setlitros",
+      "src_pagos_pagos_tostring"
+    ],
+    "3": [
+      "src_gestionficherosjson",
+      "src_gestionficherosjson_gestionficherosjson",
+      "src_gestionficherosjson_gestionficherosjson_getclientes",
+      "src_gestionficherosjson_gestionficherosjson_getpagos",
+      "src_gestionficherosjson_gestionficherosjson_obtenervalor",
+      "src_gestionficherosjson_gestionficherosjson_setclientes",
+      "src_gestionficherosjson_gestionficherosjson_setpagos",
+      "src_gestionficherosjson_gestionficherosjson_setuncliente",
+      "src_gestionficherosjson_gestionficherosjson_setunpago",
+      "src_gestionficherosjson_java_override",
+      "src_migracsvtojson",
+      "src_migracsvtojson_migracsvtojson",
+      "src_migracsvtojson_migracsvtojson_comprobacionficheros",
+      "src_migracsvtojson_migracsvtojson_menumigracion",
+      "src_terminal_terminal_mostrar"
+    ],
+    "4": [
+      "src_gestionficheroscsv",
+      "src_gestionficheroscsv_gestionficheroscsv",
+      "src_gestionficheroscsv_gestionficheroscsv_gestionficheroscsv",
+      "src_gestionficheroscsv_gestionficheroscsv_getclientes",
+      "src_gestionficheroscsv_gestionficheroscsv_getpagos",
+      "src_gestionficheroscsv_gestionficheroscsv_setclientes",
+      "src_gestionficheroscsv_gestionficheroscsv_setpagos",
+      "src_gestionficheroscsv_gestionficheroscsv_setuncliente",
+      "src_gestionficheroscsv_gestionficheroscsv_setunpago",
+      "src_gestionficheroscsv_java_override"
+    ],
+    "5": [
+      "src_gestionficheros",
+      "src_gestionficheros_gestionficheros",
+      "src_gestionficheros_gestionficheros_setclientes",
+      "src_gestionficheros_gestionficheros_setpagos",
+      "src_gestionficheros_gestionficheros_setuncliente",
+      "src_gestionficheros_gestionficheros_setunpago"
+    ],
+    "6": [
+      "src_gestionpagos",
+      "src_gestionpagos_gestionpagos",
+      "src_gestionpagos_gestionpagos_ultimoidpagos"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2,
+    "1": 0.2046783625730994,
+    "2": 0.16993464052287582,
+    "3": 0.3142857142857143,
+    "4": 0.4,
+    "5": 0.3333333333333333,
+    "6": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "src_pagos_pagos",
+      "label": "Pagos",
+      "degree": 29
+    },
+    {
+      "id": "src_clientes_clientes",
+      "label": "Clientes",
+      "degree": 27
+    },
+    {
+      "id": "src_terminal_terminal",
+      "label": "Terminal",
+      "degree": 24
+    },
+    {
+      "id": "src_gestionficherosjson_gestionficherosjson",
+      "label": "GestionFicherosJSON",
+      "degree": 13
+    },
+    {
+      "id": "src_gestionficheros_gestionficheros",
+      "label": "GestionFicheros",
+      "degree": 11
+    },
+    {
+      "id": "src_gestionficheroscsv_gestionficheroscsv",
+      "label": "GestionFicherosCSV",
+      "degree": 10
+    },
+    {
+      "id": "src_gestionclientes_gestionclientes",
+      "label": "GestionClientes",
+      "degree": 7
+    },
+    {
+      "id": "src_gestionpagos_gestionpagos",
+      "label": "GestionPagos",
+      "degree": 4
+    },
+    {
+      "id": "src_migracsvtojson_migracsvtojson",
+      "label": "MigraCSVToJSON",
+      "degree": 3
+    },
+    {
+      "id": "src_main_main",
+      "label": "Main",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "GestionFicherosCSV",
+      "target": "GestionFicheros",
+      "source_files": [
+        "src/GestionFicherosCSV.java",
+        "src/GestionFicheros.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "GestionFicherosJSON",
+      "target": "GestionFicheros",
+      "source_files": [
+        "src/GestionFicherosJSON.java",
+        "src/GestionFicheros.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "GestionFicherosCSV",
+      "target": "Terminal",
+      "source_files": [
+        "src/GestionFicherosCSV.java",
+        "src/Terminal.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "GestionFicherosJSON",
+      "target": "Terminal",
+      "source_files": [
+        "src/GestionFicherosJSON.java",
+        "src/Terminal.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Pagos",
+      "target": "Terminal",
+      "source_files": [
+        "src/Pagos.java",
+        "src/Terminal.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Pagos` connect `Community 2` to `Community 0`, `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.322) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Clientes` connect `Community 1` to `Community 0`, `Community 3`, `Community 4`, `Community 5`?",
+      "why": "High betweenness centrality (0.231) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Terminal` connect `Community 0` to `Community 1`, `Community 2`, `Community 3`, `Community 4`?",
+      "why": "High betweenness centrality (0.215) - this node is a cross-community bridge."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "datosJSON/clientes.json": {
+    "mtime": 1795512786.2241957,
+    "ast_hash": "d60f18bd4d2932496056f1467c42f0dd",
+    "semantic_hash": "d60f18bd4d2932496056f1467c42f0dd"
+  },
+  "datosJSON/pagos.json": {
+    "mtime": 1795512786.2242818,
+    "ast_hash": "62361f36cd12a97ae5e696244cfa04a4",
+    "semantic_hash": "62361f36cd12a97ae5e696244cfa04a4"
+  },
+  "sql/01_esquema.sql": {
+    "mtime": 1795512786.224639,
+    "ast_hash": "0dc7dcf5919d6886091519a83ce1882e",
+    "semantic_hash": "0dc7dcf5919d6886091519a83ce1882e"
+  },
+  "sql/02_triggers.sql": {
+    "mtime": 1795512786.2252703,
+    "ast_hash": "81b9bbb0be3ec05de551eeaed6d04b22",
+    "semantic_hash": "81b9bbb0be3ec05de551eeaed6d04b22"
+  },
+  "sql/03_datos.sql": {
+    "mtime": 1795512786.225603,
+    "ast_hash": "a66737bd4dfac09db507b4db3ab9f58a",
+    "semantic_hash": "a66737bd4dfac09db507b4db3ab9f58a"
+  },
+  "sql/04_comprobaciones.sql": {
+    "mtime": 1795512786.2259765,
+    "ast_hash": "755990bb72c4b8c3dd2787ac8d087fb5",
+    "semantic_hash": "755990bb72c4b8c3dd2787ac8d087fb5"
+  },
+  "src/Clientes.java": {
+    "mtime": 1795512786.2262006,
+    "ast_hash": "9d36d102903326380cbe07173297cf80",
+    "semantic_hash": "9d36d102903326380cbe07173297cf80"
+  },
+  "src/GestionClientes.java": {
+    "mtime": 1795512786.2263415,
+    "ast_hash": "b1e5c41c5e3dc198f491628bfc8fc388",
+    "semantic_hash": "b1e5c41c5e3dc198f491628bfc8fc388"
+  },
+  "src/GestionFicheros.java": {
+    "mtime": 1795512786.226448,
+    "ast_hash": "5301030ff4d5ff4ab879bfc0f5008e6a",
+    "semantic_hash": "5301030ff4d5ff4ab879bfc0f5008e6a"
+  },
+  "src/GestionFicherosCSV.java": {
+    "mtime": 1795512786.2266014,
+    "ast_hash": "ba372dba639f6b5ec2ff94cb6d683911",
+    "semantic_hash": "ba372dba639f6b5ec2ff94cb6d683911"
+  },
+  "src/GestionFicherosJSON.java": {
+    "mtime": 1795512786.2267554,
+    "ast_hash": "3296cc9c6c354ed3dbbe1ab7ab21e30b",
+    "semantic_hash": "3296cc9c6c354ed3dbbe1ab7ab21e30b"
+  },
+  "src/GestionPagos.java": {
+    "mtime": 1795512786.226913,
+    "ast_hash": "7840c480099c93bb9bfbf184285f2d3b",
+    "semantic_hash": "7840c480099c93bb9bfbf184285f2d3b"
+  },
+  "src/Main.java": {
+    "mtime": 1795512786.22706,
+    "ast_hash": "7141c8e74cab5e0255ac625a9b05090b",
+    "semantic_hash": "7141c8e74cab5e0255ac625a9b05090b"
+  },
+  "src/MigraCSVToJSON.java": {
+    "mtime": 1795512786.2271664,
+    "ast_hash": "5d1aedb224ba47c0278c82dd7236b84e",
+    "semantic_hash": "5d1aedb224ba47c0278c82dd7236b84e"
+  },
+  "src/Pagos.java": {
+    "mtime": 1795512786.2272747,
+    "ast_hash": "bb7cc8d9dfdc4e7b1d8c079e1fdd0da4",
+    "semantic_hash": "bb7cc8d9dfdc4e7b1d8c079e1fdd0da4"
+  },
+  "src/Terminal.java": {
+    "mtime": 1795512786.2273736,
+    "ast_hash": "0b43389400a9a4ee07aec3a85c2d9ab1",
+    "semantic_hash": "0b43389400a9a4ee07aec3a85c2d9ab1"
+  }
+}

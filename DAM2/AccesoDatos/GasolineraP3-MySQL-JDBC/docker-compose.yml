@@ -1,0 +1,40 @@
+# MySQL local para el caso práctico Gasolinera (Fase 1).
+# Las credenciales salen del fichero .env (no se sube al repositorio).
+#
+#   Arrancar:   docker compose up -d
+#   Estado:     docker compose ps
+#   Parar:      docker compose down
+#   Empezar de cero (borra los datos): docker compose down -v
+#
+# Los scripts de la carpeta sql/ NO se cargan solos: se ejecutan a mano y en
+# orden (01, 02, 03) desde IntelliJ o la terminal.
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: gasolinera-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "${MYSQL_PORT}:3306"
+    # utf8mb4 para tildes y ñ. log-bin-trust-function-creators permite crear
+    # triggers con un usuario que no es root (con el binlog activado, MySQL
+    # lo exigiría).
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_0900_ai_ci
+      - --log-bin-trust-function-creators=1
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:

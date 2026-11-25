@@ -1,0 +1,7 @@
+# Configuración LOCAL (no se sube al repositorio, está en .gitignore).
+# Cambia las dos claves antes de arrancar por primera vez.
+MYSQL_ROOT_PASSWORD=cambia_la_clave_root
+MYSQL_DATABASE=gasolinera
+MYSQL_USER=gasolinera_app
+MYSQL_PASSWORD=cambia_la_clave_app
+MYSQL_PORT=3306
